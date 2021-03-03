@@ -9,7 +9,10 @@ const Filters = (props) => {
     <section>
       <form onSubmit={handleSubmit}>
         <h1> en marcha!</h1>
-        <FilterInput handleFilter={props.handleFilter} />
+        <FilterInput
+          handleFilter={props.handleFilter}
+          handleReset={props.handleReset}
+        />
         <FilterSpecies handleFilter={props.handleFilter} />
       </form>
     </section>

@@ -6,6 +6,9 @@ const FilterInput = (props) => {
     });
   };
 
+  const handleReset = () => {
+    props.handleReset();
+  };
   return (
     <label className="form__label" htmlFor="searchField">
       <input
@@ -16,7 +19,7 @@ const FilterInput = (props) => {
         placeholder="write a character name"
         onChange={handleChange}
       ></input>
-      <span className="icon iconInput fas fa-undo"></span>
+      <span className="icon iconInput fas fa-undo" onClick={handleReset}></span>
     </label>
   );
 };

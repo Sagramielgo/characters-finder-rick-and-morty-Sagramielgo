@@ -31,11 +31,17 @@ const App = () => {
       return specie === 'all' ? true : character.specie === specie;
     });
 
-  console.log(filteredCharacters);
+  const handleReset = () => {
+    console.log('estoy borrando');
+    setData(data);
+    setName('');
+    setSpecie('all');
+  };
+  console.log(name);
   return (
     <div className="app">
       <header className="app__header">
-        <Filters handleFilter={handleFilter} />
+        <Filters handleFilter={handleFilter} handleReset={handleReset} />
       </header>
       <main className="app__main">
         <CharacterList charactersInfo={filteredCharacters} />
