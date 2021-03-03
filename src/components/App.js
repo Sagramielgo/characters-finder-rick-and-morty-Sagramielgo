@@ -1,8 +1,15 @@
 import '../stylesSheets/App.scss';
 import CharacterList from './CharacterList';
-import React from 'react';
+import getDataFromApi from '../services/Api';
+import React, { useState, useEffect } from 'react';
 
 const App = () => {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    getDataFromApi().then((data) => setData(data));
+  }, []);
+
   return (
     <>
       <h1>Segundo commit y en marcha!</h1>;
