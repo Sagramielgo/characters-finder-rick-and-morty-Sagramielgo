@@ -7,7 +7,7 @@ import React, { useState, useEffect } from 'react';
 const App = () => {
   const [data, setData] = useState([]);
   const [name, setName] = useState('');
-  /* const [species, setSpecies] = useState(''); */
+  const [specie, setSpecie] = useState('all');
 
   useEffect(() => {
     getDataFromApi().then((data) => setData(data));
@@ -16,12 +16,21 @@ const App = () => {
   const handleFilter = (inputChange) => {
     if (inputChange.key === 'name') {
       setName(inputChange.value);
+    } else if (inputChange.key === 'specie') {
+      setSpecie(inputChange.value);
     }
   };
+  console.log(specie);
 
-  const filteredCharacters = data.filter((character) =>
-    character.name.toUpperCase().includes(name)
-  );
+  const filteredCharacters = data
+    .filter((character) => {
+      return character.name.toUpperCase().includes(name);
+    })
+
+    .filter((character) => {
+      return specie === 'all' ? true : character.specie === specie;
+    });
+
   console.log(filteredCharacters);
   return (
     <div className="app">

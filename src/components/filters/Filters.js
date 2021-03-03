@@ -10,7 +10,7 @@ const Filters = (props) => {
       <form onSubmit={handleSubmit}>
         <h1> en marcha!</h1>
         <FilterInput handleFilter={props.handleFilter} />
-        <FilterSpecies />
+        <FilterSpecies handleFilter={props.handleFilter} />
       </form>
     </section>
   );

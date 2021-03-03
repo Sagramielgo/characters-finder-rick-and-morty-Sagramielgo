@@ -1,20 +1,20 @@
 const FilterSpecies = (props) => {
   const handleChange = (ev) => {
     props.handleFilter({
-      key: 'species',
+      key: 'specie',
       value: ev.target.value,
     });
   };
   return (
     <>
-      <label>Especie:</label>
+      <label>Species:</label>
       <select
         className="form__input-text"
-        name="species"
-        id="species"
+        name="specie"
+        id="specie"
         onChange={handleChange}
       >
-        <option value="All">All</option>
+        <option value="all">All</option>
         <option value="Alien">Alien</option>
         <option value="Human">Human</option>
       </select>

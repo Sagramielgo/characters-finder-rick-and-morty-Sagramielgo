@@ -13,7 +13,7 @@ const FilterInput = (props) => {
         type="text"
         name="searchField"
         id="searchField"
-        placeholder="Insert character name"
+        placeholder="write a character name"
         onChange={handleChange}
       ></input>
       <span className="icon iconInput fas fa-undo"></span>
