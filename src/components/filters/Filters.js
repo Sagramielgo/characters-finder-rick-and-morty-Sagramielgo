@@ -1,15 +1,15 @@
 import FilterInput from './FilterInput';
 import FilterSpecies from './FilterSpecies';
 
-const App = () => {
+const Filters = (props) => {
   return (
     <section>
       <form>
         <h1>Segundo commit y en marcha!</h1>;
-        <FilterInput />;
+        <FilterInput handleFilter={props.handleFilter} />;
         <FilterSpecies />
       </form>
     </section>
   );
 };
-export default App;
+export default Filters;
