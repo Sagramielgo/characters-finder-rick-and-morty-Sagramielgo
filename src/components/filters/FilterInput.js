@@ -5,6 +5,7 @@ const FilterInput = (props) => {
       value: ev.target.value.toUpperCase(),
     });
   };
+
   return (
     <label className="form__label" htmlFor="searchField">
       <input

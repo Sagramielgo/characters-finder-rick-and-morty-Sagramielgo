@@ -2,7 +2,6 @@ import '../stylesSheets/CharacterCard.scss';
 const CharacterCard = (props) => {
   return (
     <>
-      {/* <li className="card"> */}
       <div className="card__container-img">
         <img
           className="card__img"
@@ -15,7 +14,6 @@ const CharacterCard = (props) => {
         <p className="card__text-paragraph">{props.characterInfo.specie}</p>
         <p className="card__text-paragraph">{props.characterInfo.planet}</p>
       </div>
-      {/*    </li> */}
     </>
   );
 };
