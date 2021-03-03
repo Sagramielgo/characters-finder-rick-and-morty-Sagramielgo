@@ -1,11 +1,20 @@
+import '../stylesSheets/CharacterList.scss';
 import CharacterCard from './CharacterCard';
-const CharacterList = () => {
+
+const CharacterList = (props) => {
+  const charactersList = props.charactersInfo.map((card) => {
+    return (
+      <CharacterCard
+        className="characterCard"
+        key={card.id}
+        characterInfo={card}
+      />
+    );
+  });
   return (
     <section>
-      <ul>
-        <li>
-          <CharacterCard />
-        </li>
+      <ul className="charactersList">
+        <li>{charactersList}</li>
       </ul>
     </section>
   );

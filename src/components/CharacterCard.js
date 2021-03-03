@@ -1,3 +1,4 @@
+import '../stylesSheets/CharacterCard.scss';
 const CharacterCard = (props) => {
   return (
     <li className="card">
