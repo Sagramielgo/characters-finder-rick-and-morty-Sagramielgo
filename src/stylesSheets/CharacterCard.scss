@@ -1,0 +1,88 @@
+@import './variables.scss';
+
+.link {
+  text-decoration: none;
+}
+
+.card {
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 190px;
+  grid-template-rows: 85px 215px;
+  grid-template-areas: 'image' 'text';
+  border-radius: 25px;
+  background-color: rgb(49, 209, 214);
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+  border: 3px solid violet;
+  transition: all 0.2s ease-in-out;
+  &:hover {
+    transform: scale(1.1);
+    background-color: rgb(241, 165, 241);
+    color: blue;
+  }
+
+  @media all and (max-width: $displayM) {
+    grid-template-columns: 140px;
+    grid-template-rows: 80px 145px;
+  }
+
+  /*  @media all and (max-width: $displayS) {
+    grid-template-columns: 150px;
+    grid-template-rows: 90px 130px;
+  } */
+
+  &__container-img {
+    grid-area: image;
+  }
+
+  &__img {
+    width: 195px;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+
+    @media all and (max-width: $displayM) {
+      width: 145px;
+    }
+  }
+
+  &__text {
+    grid-area: text;
+    justify-content: flex-end;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+
+    &-title {
+      margin: 65px 25px 0 25px;
+      color: white;
+      padding: 3px 0 5px 0;
+      background-color: rgba(38, 50, 230, 0.5);
+      border-radius: 10px;
+      @media all and (max-width: $displayM) {
+        margin: 30px 20px 0 20px;
+        font-size: 14px;
+      }
+
+      /*   @media all and (max-width: $displayS) {
+        font-size: 13px;
+      } */
+    }
+
+    &-paragraph {
+      padding: 0;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-size: $defaultFontSize;
+      font-weight: 500;
+      color: $paragraph-color;
+
+      @media all and (max-width: $displayM) {
+        font-size: 13px;
+      }
+
+      /*    @media all and (max-width: $displayS) {
+        font-size: 11px;
+      } */
+    }
+  }
+}

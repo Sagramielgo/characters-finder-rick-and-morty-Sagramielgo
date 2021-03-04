@@ -1,0 +1,13 @@
+@import './variables.scss';
+
+.charactersList {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(auto-fill, 200px);
+  grid-gap: 50px;
+
+  @media all and (max-width: $displayM) {
+    grid-template-columns: repeat(auto-fill, 150px);
+    grid-gap: 40px;
+  }
+}

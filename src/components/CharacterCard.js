@@ -2,7 +2,11 @@ import '../stylesSheets/CharacterCard.scss';
 import { Link } from 'react-router-dom';
 const CharacterCard = (props) => {
   return (
-    <Link className="link" to={`/character/${props.characterInfo.id}`} replace>
+    <Link
+      className="link card"
+      to={`/character/${props.characterInfo.id}`}
+      replace
+    >
       <div className="card__container-img">
         <img
           className="card__img"

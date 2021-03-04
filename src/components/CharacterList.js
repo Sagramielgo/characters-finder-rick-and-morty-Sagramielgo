@@ -14,7 +14,7 @@ const CharacterList = (props) => {
   return (
     <section className="app__main">
       <ul className="charactersList">
-        <li className="card">{charactersList}</li>
+        <li>{charactersList}</li>
       </ul>
     </section>
   );
