@@ -45,7 +45,6 @@
   &__text {
     padding: 20px;
     text-align: left;
-    font-family: $textFont;
     font-weight: 500;
     color: $paragraphColor;
   }
@@ -53,7 +52,6 @@
   &__text-error {
     padding: 20px;
     text-align: left;
-    font-family: $textFont;
     font-size: 30px;
     font-weight: 700;
     color: $paragraphColor;

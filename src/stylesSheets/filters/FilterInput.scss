@@ -8,11 +8,10 @@
     width: 250px;
     height: 60px;
     background: transparent;
-    color: $brandColor-1;
-    font-family: $searchFont;
-    font-weight: bold;
+    color: $brandColor-4;
     border: 2px $brandColor-3 solid;
     border-radius: 10px;
+    font-size: 18px;
     background-repeat: no-repeat;
     padding-left: 20px;
 
@@ -26,20 +25,15 @@
       text-align: center;
       padding-right: 30px;
       color: $brandColor-3;
-      font-size: 20px;
+      font-size: 18px;
 
       @media all and (max-width: $displayM) {
         padding-right: 25px;
-        font-size: $defaultFontSize;
       }
     }
     &:focus {
       background-color: rgba(28, 129, 163, 0.6);
-      font-size: 18px;
-
-      @media all and (max-width: $displayM) {
-        font-size: $defaultFontSize;
-      }
+      font-size: 20px;
     }
   }
 }

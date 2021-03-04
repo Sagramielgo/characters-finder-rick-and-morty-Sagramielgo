@@ -17,8 +17,17 @@ const CharacterCard = (props) => {
         </div>
         <div className="card__text">
           <h3 className="card__text-title">{props.characterInfo.name}</h3>
-          <p className="card__text-paragraph">{props.characterInfo.specie}</p>
-          <p className="card__text-paragraph">{props.characterInfo.planet}</p>
+          <p className="card__text-paragraph1">
+            {props.characterInfo.specie}{' '}
+            <span className="card__text-paragraph3">
+              {props.characterInfo.status === 'Alive' ? (
+                <i className="fas fa-heartbeat"></i>
+              ) : (
+                <i className="fas fa-skull"></i>
+              )}
+            </span>
+          </p>
+          <p className="card__text-paragraph2">{props.characterInfo.planet}</p>
         </div>
       </Link>
     </li>
