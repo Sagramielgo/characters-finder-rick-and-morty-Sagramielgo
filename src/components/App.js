@@ -3,6 +3,8 @@ import CharacterList from './CharacterList';
 import getDataFromApi from './services/Api';
 import Filters from './filters/Filters';
 import React, { useState, useEffect } from 'react';
+import { Route, Switch } from 'react-router-dom';
+import CharacterDetail from './CharacterDetail';
 
 const App = () => {
   const [data, setData] = useState([]);
@@ -32,13 +34,27 @@ const App = () => {
     });
 
   console.log(filteredCharacters);
+
+  const renderCharacterDetail = (routerProps) => {
+    const clickedCharacter = parseInt(routerProps.match.params.id);
+    const foundCharacter = data.find((character) => {
+      return character.id === clickedCharacter;
+    });
+    return <CharacterDetail characterInfo={foundCharacter} />;
+  };
+
   return (
     <div className="app">
       <header className="app__header">
         <Filters handleFilter={handleFilter} />
       </header>
       <main className="app__main">
-        <CharacterList charactersInfo={filteredCharacters} />
+        <Switch>
+          <Route exact path="/">
+            <CharacterList charactersInfo={filteredCharacters} />
+          </Route>
+          <Route path="/character/:id" render={renderCharacterDetail} />
+        </Switch>
       </main>
     </div>
   );
