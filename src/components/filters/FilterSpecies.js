@@ -1,3 +1,5 @@
+import '../../stylesSheets/filters/FilterSpecies.scss';
+
 const FilterSpecies = (props) => {
   const handleChange = (ev) => {
     props.handleFilter({
@@ -7,9 +9,9 @@ const FilterSpecies = (props) => {
   };
   return (
     <>
-      <label>Species:</label>
+      <label className="specie__title">Species:</label>
       <select
-        className="form__input-text"
+        className="specie__input"
         name="specie"
         id="specie"
         onChange={handleChange}
