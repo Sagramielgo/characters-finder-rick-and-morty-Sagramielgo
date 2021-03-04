@@ -1,0 +1,45 @@
+@import './core/Variables.scss';
+
+.error {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+
+  &__text {
+    padding: 0 50px 100px 50px;
+    font-size: 30px;
+    font-weight: bold;
+    color: $brandColor-1;
+
+    @media all and (max-width: $displayM) {
+      font-size: 24px;
+    }
+
+    @media all and (max-width: $displayS) {
+      font-size: 12px;
+    }
+  }
+
+  &__image {
+    z-index: -1;
+    width: 50vh;
+    position: absolute;
+    bottom: 0;
+
+    @media all and (max-width: $displayM) {
+      width: 40vh;
+      bottom: 0;
+    }
+  }
+}
+.image2 {
+  z-index: -2;
+  width: 45vh;
+  position: absolute;
+  bottom: 5vh;
+  @media all and (max-width: $displayM) {
+    width: 40vh;
+    bottom: 5vh;
+  }
+}

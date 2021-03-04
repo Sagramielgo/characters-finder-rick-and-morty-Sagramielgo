@@ -1,5 +1,6 @@
 import '../../stylesSheets/characters/CharacterList.scss';
 import CharacterCard from './CharacterCard';
+import NotFound from '../NotFound';
 
 const CharacterList = (props) => {
   const charactersList = props.charactersInfo.map((card) => {
@@ -11,6 +12,10 @@ const CharacterList = (props) => {
       />
     );
   });
+
+  if (charactersList.length === 0) {
+    return <NotFound />;
+  }
   return (
     <section>
       <ul className="charactersList">{charactersList}</ul>
