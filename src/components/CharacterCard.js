@@ -1,7 +1,8 @@
 import '../stylesSheets/CharacterCard.scss';
+import { Link } from 'react-router-dom';
 const CharacterCard = (props) => {
   return (
-    <>
+    <Link className="link" to={`/character/${props.characterInfo.id}`} replace>
       <div className="card__container-img">
         <img
           className="card__img"
@@ -14,7 +15,7 @@ const CharacterCard = (props) => {
         <p className="card__text-paragraph">{props.characterInfo.specie}</p>
         <p className="card__text-paragraph">{props.characterInfo.planet}</p>
       </div>
-    </>
+    </Link>
   );
 };
 export default CharacterCard;
