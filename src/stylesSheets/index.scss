@@ -3,6 +3,9 @@ body {
   height: 100%;
   margin: 0;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  background: url('../images/milkyWay.jpeg') center no-repeat;
+  background: url('../images/milkyWay.jpeg') no-repeat center top;
   background-size: cover;
+  background-attachment: fixed;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }

@@ -1,4 +1,4 @@
-import '../stylesSheets/CharacterCard.scss';
+import '../../stylesSheets/characters/CharacterCard.scss';
 import { Link } from 'react-router-dom';
 const CharacterCard = (props) => {
   return (

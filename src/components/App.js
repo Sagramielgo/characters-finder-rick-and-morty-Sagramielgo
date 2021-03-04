@@ -1,10 +1,10 @@
 import '../stylesSheets/App.scss';
-import CharacterList from './CharacterList';
+import CharacterList from './characters/CharacterList';
 import getDataFromApi from './services/Api';
 import Filters from './filters/Filters';
 import React, { useState, useEffect } from 'react';
 import { Route, Switch } from 'react-router-dom';
-import CharacterDetail from './CharacterDetail';
+import CharacterDetail from './characters/CharacterDetail';
 
 const App = () => {
   const [data, setData] = useState([]);

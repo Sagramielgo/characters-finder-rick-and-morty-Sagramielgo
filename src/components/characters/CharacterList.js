@@ -1,4 +1,4 @@
-import '../stylesSheets/CharacterList.scss';
+import '../../stylesSheets/characters/CharacterList.scss';
 import CharacterCard from './CharacterCard';
 
 const CharacterList = (props) => {

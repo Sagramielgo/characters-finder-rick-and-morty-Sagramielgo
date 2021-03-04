@@ -1,8 +1,8 @@
 import React from 'react';
 /* import PropTypes from 'prop-types'; */
-import '../stylesSheets/CharacterDetail.scss';
+import '../../stylesSheets/characters/CharacterDetail.scss';
 import { Link } from 'react-router-dom';
-import image from '../images/CatNoWay.gif';
+import image from '../../images/CatNoWay.gif';
 
 const CharacterDetail = (props) => {
   if (props.characterInfo === undefined) {

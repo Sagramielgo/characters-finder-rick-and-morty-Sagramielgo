@@ -1,10 +1,11 @@
-@import './variables.scss';
+@import '../variables.scss';
 
 .modal {
   width: 100%;
   height: 100vh;
-  background-color: rgb(28, 129, 163);
-
+  background: url('../../images/UNIVERSE-2.jpg') no-repeat center top;
+  background-size: cover;
+  background-attachment: fixed;
   &__dialog {
     height: 100%;
     display: flex;
