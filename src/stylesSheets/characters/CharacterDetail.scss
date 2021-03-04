@@ -43,7 +43,7 @@
   }
 
   &__text {
-    padding: 20px;
+    padding-left: 20px;
     text-align: left;
     font-weight: 500;
     color: $paragraphColor;
@@ -54,11 +54,12 @@
     text-align: left;
     font-size: 30px;
     font-weight: 700;
-    color: $paragraphColor;
+    color: $brandColor-2;
   }
 
   &__text--property {
     font-weight: 600;
+    margin-bottom: 5px;
   }
 }
 
@@ -77,7 +78,10 @@
   outline: none;
   color: $brandColor-4;
 }
+.iconDetail,
+.iconError {
+  background-color: $brandColor-2;
+}
 .iconDetail {
   margin-top: 250px;
-  background-color: $brandColor-2;
 }

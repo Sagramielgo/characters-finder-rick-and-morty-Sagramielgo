@@ -9,10 +9,10 @@ const CharacterDetail = (props) => {
     return (
       <div className="modal">
         <div className="modal__dialog">
-          <div className="modal__content">
+          <div className="modal__content animate__animated animate__rubberBand">
             <header className="modal__header">
               <Link to="/">
-                <span className="modal__close icon fas fa-undo"></span>
+                <span className="modal__close icon iconError fas fa-undo animate__animated animate__headShake animate__infinite"></span>
               </Link>
             </header>
             <div className="modal__text-error">
@@ -33,7 +33,7 @@ const CharacterDetail = (props) => {
     return (
       <article className="modal">
         <div className="modal__dialog">
-          <div className="modal__content">
+          <div className="modal__content animate__animated animate__rubberBand">
             <header className="modal__header"></header>
             <div className="modal__img">
               <img
@@ -62,7 +62,7 @@ const CharacterDetail = (props) => {
               </p>
             </div>
             <Link to="/">
-              <span className="modal__close icon iconDetail fas fa-undo"></span>
+              <span className="modal__close icon iconDetail fas fa-undo animate__animated animate__headShake animate__infinite"></span>
             </Link>
           </div>
         </div>

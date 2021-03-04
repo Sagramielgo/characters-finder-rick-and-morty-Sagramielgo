@@ -7,13 +7,21 @@
   font-weight: bold;
 }
 .specie__input {
-  width: 110px;
+  width: 130px;
   height: 35px;
   font-size: 20px;
+  color: $brandColor-1;
+  font-weight: bold;
   border: none;
   margin-left: 10px;
   border: 2px solid $brandColor-3;
   border-radius: 15px;
   padding-left: 10px;
   cursor: pointer;
+  &:focus {
+    border: none;
+  }
+  &:active {
+    border: none;
+  }
 }

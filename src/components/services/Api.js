@@ -10,6 +10,7 @@ const getDataFromApi = () => {
           specie: character.species,
           planet: character.location.name,
           status: character.status,
+          gender: character.gender,
           episodes: character.episode,
         };
       });

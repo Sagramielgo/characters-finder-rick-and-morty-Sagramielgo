@@ -9,7 +9,11 @@ const Filters = (props) => {
   };
   return (
     <section>
-      <img src={logo} alt="logo Rick and Morty" />
+      <img
+        src={logo}
+        className="animate__animated animate__flip"
+        alt="logo Rick and Morty"
+      />
       <form onSubmit={handleSubmit} className="formContainer">
         <FilterInput
           handleFilter={props.handleFilter}

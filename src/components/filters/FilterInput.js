@@ -21,7 +21,10 @@ const FilterInput = (props) => {
         onChange={handleChange}
         value={props.name}
       ></input>
-      <span className="icon iconInput fas fa-undo" onClick={handleReset}></span>
+      <span
+        className="icon iconInput fas fa-undo animate__animated animate__pulse animate__infinite"
+        onClick={handleReset}
+      ></span>
     </label>
   );
 };
