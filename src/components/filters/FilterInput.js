@@ -1,3 +1,4 @@
+import '../../stylesSheets/filters/FilterInput.scss';
 const FilterInput = (props) => {
   const handleChange = (ev) => {
     props.handleFilter({

@@ -1,5 +1,6 @@
 import FilterInput from './FilterInput';
 import FilterSpecies from './FilterSpecies';
+import logo from '../../images/logo.png';
 
 const Filters = (props) => {
   const handleSubmit = (ev) => {
@@ -7,8 +8,8 @@ const Filters = (props) => {
   };
   return (
     <section>
-      <form onSubmit={handleSubmit}>
-        <h1> en marcha!</h1>
+      <form onSubmit={handleSubmit} className="formContainer">
+        <img src={logo} alt="logo Rick and Morty" />
         <FilterInput
           handleFilter={props.handleFilter}
           handleReset={props.handleReset}
