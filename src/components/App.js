@@ -52,17 +52,24 @@ const App = () => {
 
   return (
     <div className="app">
-      <header className="app__header">
-        <Filters handleFilter={handleFilter} handleReset={handleReset} />
-      </header>
-      <main className="app__main">
-        <Switch>
-          <Route exact path="/">
-            <CharacterList charactersInfo={filteredCharacters} />
-          </Route>
-          <Route path="/character/:id" render={renderCharacterDetail} />
-        </Switch>
-      </main>
+      <Switch>
+        <Route exact path="/">
+          <>
+            <header className="app__header">
+              <Filters
+                handleFilter={handleFilter}
+                handleReset={handleReset}
+                name={name}
+                specie={specie}
+              />
+            </header>
+            <main className="app__main">
+              <CharacterList charactersInfo={filteredCharacters} />
+            </main>
+          </>
+        </Route>
+        <Route path="/character/:id" render={renderCharacterDetail} />
+      </Switch>
     </div>
   );
 };

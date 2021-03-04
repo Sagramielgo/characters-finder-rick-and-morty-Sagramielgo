@@ -18,6 +18,7 @@ const FilterInput = (props) => {
         id="searchField"
         placeholder="write a character name"
         onChange={handleChange}
+        value={props.name}
       ></input>
       <span className="icon iconInput fas fa-undo" onClick={handleReset}></span>
     </label>

@@ -12,8 +12,12 @@ const Filters = (props) => {
         <FilterInput
           handleFilter={props.handleFilter}
           handleReset={props.handleReset}
+          name={props.name}
         />
-        <FilterSpecies handleFilter={props.handleFilter} />
+        <FilterSpecies
+          handleFilter={props.handleFilter}
+          specie={props.specie}
+        />
       </form>
     </section>
   );
