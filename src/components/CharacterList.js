@@ -12,10 +12,8 @@ const CharacterList = (props) => {
     );
   });
   return (
-    <section className="app__main">
-      <ul className="charactersList">
-        <li>{charactersList}</li>
-      </ul>
+    <section>
+      <ul className="charactersList">{charactersList}</ul>
     </section>
   );
 };

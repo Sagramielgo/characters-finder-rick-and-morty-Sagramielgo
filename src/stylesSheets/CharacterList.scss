@@ -5,6 +5,7 @@
   width: 100%;
   grid-template-columns: repeat(auto-fill, 200px);
   grid-gap: 50px;
+  list-style: none;
 
   @media all and (max-width: $displayM) {
     grid-template-columns: repeat(auto-fill, 150px);
