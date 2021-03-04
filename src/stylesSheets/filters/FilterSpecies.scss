@@ -1,7 +1,9 @@
+@import '../core/Variables.scss';
+@import '../core/Reset.scss';
 .specie__title {
   font-size: 20px;
   margin-left: 20px;
-  color: aliceblue;
+  color: $brandColor-4;
   font-weight: bold;
 }
 .specie__input {
@@ -10,7 +12,7 @@
   font-size: 20px;
   border: none;
   margin-left: 10px;
-  border: 2px solid cyan;
+  border: 2px solid $brandColor-3;
   border-radius: 15px;
   padding-left: 10px;
   cursor: pointer;

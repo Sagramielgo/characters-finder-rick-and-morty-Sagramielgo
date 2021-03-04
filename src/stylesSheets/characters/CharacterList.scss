@@ -1,4 +1,5 @@
-@import '../variables.scss';
+@import '../core/variables.scss';
+@import '../core/Reset.scss';
 
 .charactersList {
   display: grid;

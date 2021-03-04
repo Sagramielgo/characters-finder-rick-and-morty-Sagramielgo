@@ -1,4 +1,5 @@
-@import './variables.scss';
+@import './core/Variables.scss';
+@import './core/Reset.scss';
 
 .app {
   width: 100%;
