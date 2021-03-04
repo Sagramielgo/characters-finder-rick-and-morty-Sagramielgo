@@ -12,7 +12,7 @@
   grid-template-areas: 'image' 'text';
   border-radius: 25px;
   background-color: rgb(49, 209, 214);
-  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
+  box-shadow: 5px 5px 15px rgba(163, 228, 240, 0.7);
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   text-align: center;
   border: 3px solid violet;
@@ -20,7 +20,6 @@
   &:hover {
     transform: scale(1.1);
     background-color: rgb(241, 165, 241);
-    color: blue;
   }
 
   @media all and (max-width: $displayM) {

@@ -3,6 +3,7 @@
 .charactersList {
   display: grid;
   width: 100%;
+  height: 100%;
   grid-template-columns: repeat(auto-fill, 200px);
   grid-gap: 50px;
   list-style: none;
