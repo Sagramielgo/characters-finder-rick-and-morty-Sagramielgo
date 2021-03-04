@@ -1,6 +1,6 @@
 import React from 'react';
 /* import PropTypes from 'prop-types'; */
-/* import '../stylesheets/CharacterDetail.scss'; */
+import '../stylesSheets/CharacterDetail.scss';
 import { Link } from 'react-router-dom';
 /* import image from '../images/meeseeks.png'; */
 

@@ -33,7 +33,6 @@ const App = () => {
       return specie === 'all' ? true : character.specie === specie;
     });
 
-<<<<<<< HEAD
   const handleReset = () => {
     console.log('estoy borrando');
     setData(data);
@@ -41,7 +40,6 @@ const App = () => {
     setSpecie('all');
   };
   console.log(name);
-=======
   console.log(filteredCharacters);
 
   const renderCharacterDetail = (routerProps) => {
@@ -52,7 +50,6 @@ const App = () => {
     return <CharacterDetail characterInfo={foundCharacter} />;
   };
 
->>>>>>> master
   return (
     <div className="app">
       <header className="app__header">
