@@ -1,14 +1,25 @@
-// brand colors
+$defaultFontSize: 16;
+
 $brandColor-1: violet;
 $brandColor-2: #1c5ba3;
 $brandColor-3: cyan;
 $brandColor-4: aliceBlue;
 $paragraphColor: black;
-// fonts
-$searchFont: 'Roboto', sans-serif;
-// font size
-$defaultFontSize: 16px;
 
 // display
 $displayM: 768px;
 $displayS: 480px;
+
+@mixin medium {
+  @media all and (max-width: 768px) {
+    @content;
+  }
+}
+@mixin small {
+  @media all and (max-width: 480px) {
+    @content;
+  }
+}
+@function rem($pixels) {
+  @return ($pixels / $defaultFontSize * 1rem);
+}

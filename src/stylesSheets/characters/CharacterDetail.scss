@@ -7,6 +7,7 @@
   background: url('../../images/planets.jpg') no-repeat center top;
   background-size: cover;
   background-attachment: fixed;
+
   &__dialog {
     height: 100%;
     display: flex;
@@ -16,13 +17,13 @@
 
   &__content {
     padding: 1rem;
-    border-radius: 30px;
+    border-radius: 40px;
     border: solid 5px rebeccapurple;
     background-color: $brandColor-1;
     display: flex;
     flex-direction: row;
     align-items: center;
-    @media all and (max-width: $displayM) {
+    @include medium {
       min-width: 250px;
     }
   }

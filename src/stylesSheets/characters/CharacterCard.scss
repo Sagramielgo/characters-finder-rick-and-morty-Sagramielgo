@@ -22,12 +22,12 @@
     background-color: rgb(241, 165, 241);
   }
 
-  @media all and (max-width: $displayM) {
+  @include medium {
     grid-template-columns: 140px;
     grid-template-rows: 80px 145px;
   }
 
-  @media all and (max-width: $displayS) {
+  @include small {
     grid-template-columns: 150px;
     grid-template-rows: 90px 130px;
   }
@@ -41,7 +41,7 @@
     border-top-left-radius: 25px;
     border-top-right-radius: 25px;
 
-    @media all and (max-width: $displayM) {
+    @include medium {
       width: 145px;
     }
   }
@@ -58,12 +58,12 @@
       padding: 3px 0 5px 0;
       background-color: rgba(22, 148, 187, 0.5);
       border-radius: 10px;
-      @media all and (max-width: $displayM) {
+      @include medium {
         margin: 30px 15px 20px 15px;
         font-size: 14px;
       }
 
-      @media all and (max-width: $displayS) {
+      @include small {
         font-size: 13px;
       }
     }
@@ -73,7 +73,7 @@
       font-weight: 500;
       color: $paragraphColor;
 
-      @media all and (max-width: $displayM) {
+      @include medium {
         font-size: 13px;
       }
     }
@@ -82,7 +82,7 @@
       color: $paragraphColor;
       font-size: 14px;
 
-      @media all and (max-width: $displayM) {
+      @include medium {
         font-size: 10px;
       }
     }
@@ -92,7 +92,7 @@
       color: $paragraphColor;
       font-size: 20px;
       color: rebeccapurple;
-      @media all and (max-width: $displayM) {
+      @include medium {
         font-size: 14px;
       }
     }

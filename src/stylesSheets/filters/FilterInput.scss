@@ -15,7 +15,7 @@
     background-repeat: no-repeat;
     padding-left: 20px;
 
-    @media all and (max-width: $displayM) {
+    @include medium {
       width: 200px;
       height: 50px;
       padding-left: 10px;
@@ -27,7 +27,7 @@
       color: $brandColor-3;
       font-size: 18px;
 
-      @media all and (max-width: $displayM) {
+      @include medium {
         padding-right: 25px;
         font-size: 14px;
       }
