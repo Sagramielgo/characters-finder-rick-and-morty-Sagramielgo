@@ -27,3 +27,13 @@
     }
   }
 }
+.copy {
+  margin-bottom: 30px;
+  font-weight: normal;
+  font-size: 16px;
+  color: $brandColor-4;
+  @include medium {
+    font-size: 12px;
+    margin-bottom: 20px;
+  }
+}

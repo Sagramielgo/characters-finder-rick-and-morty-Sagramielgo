@@ -16,12 +16,20 @@
   }
 }
 .logo {
-  width: 400px;
+  width: 600px;
   @include medium {
     width: 300px;
   }
 
   @include small {
     width: 150px;
+  }
+}
+.copy {
+  font-weight: normal;
+  font-size: 16px;
+  color: $brandColor-4;
+  @include medium {
+    font-size: 12px;
   }
 }

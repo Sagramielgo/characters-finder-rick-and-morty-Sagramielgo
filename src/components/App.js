@@ -92,6 +92,7 @@ const App = () => {
         </Route>
         <Route path="/character/:id" render={renderCharacterDetail} />
       </Switch>
+      <h5 className="copy">By Sagra Mielgo copy 2021</h5>
     </div>
   );
 };

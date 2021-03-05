@@ -15,6 +15,7 @@ const Filters = (props) => {
         className="logo animate__animated animate__flip"
         alt="logo Rick and Morty"
       />
+
       <form onSubmit={handleSubmit} className="formContainer">
         <fieldset className="formContainer__wrapper">
           <FilterInput

@@ -16,7 +16,8 @@ const CharacterDetail = (props) => {
               </Link>
             </header>
             <div className="modal__text-error">
-              <p>Error: character not found</p>
+              <p>Error:</p>
+              <p>Character not found</p>
             </div>
             <div className="modal__img">
               <img

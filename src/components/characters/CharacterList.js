@@ -18,7 +18,9 @@ const CharacterList = (props) => {
   }
   return (
     <section>
-      <ul className="charactersList">{charactersList}</ul>
+      <ul className="charactersList animate__animated animate__zoomIn">
+        {charactersList}
+      </ul>
     </section>
   );
 };

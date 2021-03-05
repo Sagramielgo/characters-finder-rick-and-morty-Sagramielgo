@@ -2,7 +2,7 @@
 @import '../core/Reset.scss';
 .specie__title {
   font-size: 20px;
-  margin-left: 20px;
+  margin: 0 0 20px 20px;
   color: $brandColor-4;
   font-weight: bold;
 }
@@ -17,6 +17,7 @@
   border: 2px solid $brandColor-3;
   border-radius: 15px;
   padding-left: 10px;
+  margin-top: 10px;
   cursor: pointer;
   &:focus {
     border: none;

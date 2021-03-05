@@ -1,4 +1,5 @@
 @import './core/Variables.scss';
+@import './core/Reset.scss';
 
 .error {
   display: flex;
@@ -12,23 +13,23 @@
     font-weight: bold;
     color: $brandColor-1;
 
-    @media all and (max-width: $displayM) {
-      font-size: 24px;
+    @include medium {
+      font-size: 22px;
     }
 
-    @media all and (max-width: $displayS) {
+    @include small {
       font-size: 12px;
     }
   }
 
   &__image {
     z-index: -1;
-    width: 45vh;
+    width: 40vh;
     position: absolute;
     bottom: 0;
 
-    @media all and (max-width: $displayM) {
-      width: 40vh;
+    @include medium {
+      width: 35vh;
       bottom: 0;
     }
   }
