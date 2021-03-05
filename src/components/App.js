@@ -35,7 +35,6 @@ const App = () => {
       }
     }
   };
-  console.log(planets);
   const filteredCharacters = data
     .filter((character) => {
       return character.name.toUpperCase().includes(name);
@@ -57,7 +56,6 @@ const App = () => {
   };
 
   const handleReset = () => {
-    console.log('estoy borrando');
     setData(data);
     setName('');
     setSpecie('all');
@@ -71,10 +69,11 @@ const App = () => {
     });
     return <CharacterDetail characterInfo={foundCharacter} />;
   };
-
+  //oShow or hice fiters section
   const handleBtn = () => {
     setShowFilters(!showFilters);
   };
+
   const renderFilters = () => {
     return showFilters ? (
       <Filters
@@ -95,44 +94,29 @@ const App = () => {
           <Route exact path="/">
             <>
               <Header handleBtn={handleBtn} />
-              {/*  <header className="app__header">
-                <img
-                  src={logo}
-                  className="logo animate__animated animate__flip"
-                  alt="logo Rick and Morty"
-                />
-                <button
-                  className="header__btn animate__animated animate__zoomIn"
-                  onClick={handleBtn}
-                >
-                  Search your favorite
-                </button>
-              </header> */}
-              <section className="app__filterSection">
-                {renderFilters()}
-              </section>
-              {/*    <Filters
-               handleFilter={handleFilter}
-                  handleReset={handleReset}
-                  name={name}
-                  specie={specie}
-                  planetOptions={getPlanetOptions()}
-                  planets={planets}
-                />  */}
-              <main className="app__main">
-                <CharacterList charactersInfo={filteredCharacters} />
-              </main>
+
+              {renderFilters()}
+
+              <CharacterList charactersInfo={filteredCharacters} />
             </>
           </Route>
           <Route path="/character/:id" render={renderCharacterDetail} />
         </Switch>
-        <h5 className="copy">
-          By Sagra Mielgo.
-          <span>
-            <i class="fas fa-paw"></i>
-          </span>
-          .2021
-        </h5>
+
+        <a
+          className=""
+          href="https://github.com/Sagramielgo"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <h5 className="copy animate__animated animate__headShake animate__infinite">
+            By #Git Funtastic.
+            <span>
+              <i className="fas fa-paw "></i>
+            </span>
+            .2021
+          </h5>
+        </a>
       </div>
     </>
   );

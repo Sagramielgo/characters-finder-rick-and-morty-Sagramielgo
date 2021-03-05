@@ -1,3 +1,4 @@
+@import '../core/Function.scss';
 $defaultFontSize: 16;
 
 $brandColor-1: violet;
@@ -19,7 +20,4 @@ $displayS: 480px;
   @media all and (max-width: 480px) {
     @content;
   }
-}
-@function rem($pixels) {
-  @return ($pixels / $defaultFontSize * 1rem);
 }

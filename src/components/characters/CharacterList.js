@@ -17,11 +17,11 @@ const CharacterList = (props) => {
     return <NotFound />;
   }
   return (
-    <section>
+    <main className="app__main">
       <ul className="charactersList animate__animated animate__zoomIn">
         {charactersList}
       </ul>
-    </section>
+    </main>
   );
 };
 

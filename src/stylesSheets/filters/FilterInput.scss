@@ -2,46 +2,46 @@
 @import '../core/Reset.scss';
 
 .form {
-  margin: 30px 30px 0 0;
+  margin: rem(30) rem(30) 0 0;
 
   &__input {
-    width: 250px;
-    height: 60px;
+    width: rem(250);
+    height: rem(60);
     background: transparent;
     color: $brandColor-4;
-    border: 2px $brandColor-3 solid;
-    border-radius: 10px;
-    font-size: 18px;
+    border: rem(2) $brandColor-3 solid;
+    border-radius: rem(10);
+    font-size: rem(18);
     background-repeat: no-repeat;
-    padding-left: 20px;
-    margin: 10px 0 10px 10px;
+    padding-left: rem(20);
+    margin: rem(10) 0 rem(10) rem(10);
     @include medium {
-      width: 200px;
-      height: 50px;
-      padding-left: 10px;
+      width: rem(200);
+      height: rem(50);
+      padding-left: rem(10);
     }
 
     &::placeholder {
       text-align: center;
-      padding-right: 30px;
+      padding-right: rem(30);
       color: $brandColor-3;
-      font-size: 18px;
+      font-size: rem(18);
 
       @include medium {
-        padding-right: 25px;
-        font-size: 14px;
+        padding-right: rem(25);
+        font-size: rem(14);
       }
     }
     &:focus {
       background-color: rgba(28, 129, 163, 0.6);
-      font-size: 20px;
+      font-size: rem(20);
     }
   }
 }
 .iconInput {
-  margin-left: 30px;
+  margin-left: rem(30);
   background-color: $brandColor-1;
   @include small {
-    margin: 20px 0;
+    margin: rem(20) 0;
   }
 }

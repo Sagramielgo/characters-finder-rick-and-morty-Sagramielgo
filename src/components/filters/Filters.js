@@ -2,19 +2,14 @@ import FilterInput from './FilterInput';
 import FilterSpecies from './FilterSpecies';
 import FilterPlanets from './FilterPlanets';
 import '../../stylesSheets/filters/Filters.scss';
-/* import logo from '../../images/logo.png'; */
 
 const Filters = (props) => {
   const handleSubmit = (ev) => {
     ev.preventDefault();
   };
+
   return (
-    <section>
-      {/*      <img
-        src={logo}
-        className="logo animate__animated animate__flip"
-        alt="logo Rick and Morty"
-      /> */}
+    <section className="app__filterSection animate__animated animate__fadeInDown">
       <form onSubmit={handleSubmit} className="formContainer">
         <fieldset className="formContainer__wrapper">
           <FilterInput

@@ -1,6 +1,10 @@
 @import '../core/Reset.scss';
 @import '../core/Variables.scss';
 
+.app__filterSection {
+  grid-area: filter;
+}
+
 .formContainer {
   width: 100%;
   display: flex;
@@ -15,17 +19,8 @@
     border-style: none;
   }
 }
-/* .logo {
-  width: 600px;
-  @include medium {
-    width: 300px;
-  }
 
-  @include small {
-    width: 150px;
-  }
-} */
-.copy {
+/* .copy {
   font-weight: normal;
   font-size: 16px;
   color: $brandColor-4;
@@ -33,3 +28,4 @@
     font-size: 12px;
   }
 }
+ */

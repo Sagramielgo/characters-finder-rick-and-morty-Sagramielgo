@@ -15,38 +15,6 @@
   @include small {
     grid-template-rows: 150px 1fr;
   }
-
-  /*  &__header {
-    grid-area: header;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    .header__btn {
-      width: 180px;
-      height: 35px;
-      border-radius: 10px;
-      background-color: $brandColor-1;
-      color: $brandColor-4;
-      font-size: 16px;
-      cursor: pointer;
-      margin-bottom: 20px;
-      transition: all 0.2s ease-in-out;
-      &:hover {
-        transform: scale(1.1);
-      }
-
-      @include medium {
-        width: 120px;
-        height: 25px;
-        font-size: 10px;
-      }
-    }
-  } */
-
-  &__filterSection {
-    grid-area: filter;
-  }
   &__main {
     grid-area: main;
     width: 90%;
@@ -57,12 +25,16 @@
 .copy {
   position: fixed;
   bottom: 30px;
-  right: 30px;
+  right: 40px;
   font-weight: normal;
   font-size: 16px;
   color: $brandColor-4;
+  padding: 10px;
   @include medium {
     font-size: 12px;
     bottom: 10px;
   }
+}
+.fa-paw {
+  color: $brandColor-1;
 }
