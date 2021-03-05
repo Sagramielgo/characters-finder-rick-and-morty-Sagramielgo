@@ -5,7 +5,7 @@ import Filters from './filters/Filters';
 import React, { useState, useEffect } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import CharacterDetail from './characters/CharacterDetail';
-import logo from '../images/logo.png'; /*  */
+import Header from './Header';
 
 const App = () => {
   const [data, setData] = useState([]);
@@ -94,7 +94,8 @@ const App = () => {
         <Switch>
           <Route exact path="/">
             <>
-              <header className="app__header">
+              <Header handleBtn={handleBtn} />
+              {/*  <header className="app__header">
                 <img
                   src={logo}
                   className="logo animate__animated animate__flip"
@@ -106,7 +107,7 @@ const App = () => {
                 >
                   Search your favorite
                 </button>
-              </header>
+              </header> */}
               <section className="app__filterSection">
                 {renderFilters()}
               </section>

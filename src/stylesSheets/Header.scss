@@ -1,0 +1,40 @@
+@import './core/Reset.scss';
+@import './core/Variables.scss';
+
+.header {
+  grid-area: header;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__btn {
+    width: 180px;
+    height: 35px;
+    border-radius: 10px;
+    background-color: $brandColor-1;
+    color: $brandColor-4;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition: all 0.2s ease-in-out;
+    &:hover {
+      transform: scale(1.1);
+    }
+
+    @include medium {
+      width: 120px;
+      height: 25px;
+      font-size: 10px;
+    }
+  }
+}
+.logo {
+  width: 600px;
+  @include medium {
+    width: 300px;
+  }
+
+  @include small {
+    width: 150px;
+  }
+}
