@@ -5,35 +5,64 @@
   width: 100%;
   height: 100%;
   display: grid;
-  grid-template-rows: 400px 1fr;
-  grid-template-areas: 'header' 'main';
+  grid-template-rows: 280px 1fr;
+  grid-template-areas: 'header' 'filter' 'main';
   text-align: center;
 
   @include medium {
-    grid-template-rows: 350px 1fr;
+    grid-template-rows: 180px 1fr;
   }
-
   @include small {
-    grid-template-rows: 250px 1fr;
+    grid-template-rows: 150px 1fr;
   }
 
   &__header {
     grid-area: header;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
-    &__main {
-      grid-area: main;
-      width: 90%;
-      margin: auto;
+    .header__btn {
+      width: 180px;
+      height: 35px;
+      border-radius: 10px;
+      background-color: $brandColor-1;
+      color: $brandColor-4;
+      font-size: 16px;
+      cursor: pointer;
+      margin-bottom: 20px;
+      transition: all 0.2s ease-in-out;
+      &:hover {
+        transform: scale(1.1);
+      }
+
+      @include medium {
+        width: 120px;
+        height: 25px;
+        font-size: 10px;
+      }
     }
   }
+
+  &__filterSection {
+    grid-area: filter;
+  }
+  &__main {
+    grid-area: main;
+    width: 90%;
+    margin: auto;
+  }
 }
+
 .copy {
-  margin-bottom: 30px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
   font-weight: normal;
   font-size: 16px;
   color: $brandColor-4;
   @include medium {
     font-size: 12px;
-    margin-bottom: 20px;
+    bottom: 10px;
   }
 }

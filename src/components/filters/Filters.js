@@ -2,7 +2,7 @@ import FilterInput from './FilterInput';
 import FilterSpecies from './FilterSpecies';
 import FilterPlanets from './FilterPlanets';
 import '../../stylesSheets/filters/Filters.scss';
-import logo from '../../images/logo.png';
+/* import logo from '../../images/logo.png'; */
 
 const Filters = (props) => {
   const handleSubmit = (ev) => {
@@ -10,12 +10,11 @@ const Filters = (props) => {
   };
   return (
     <section>
-      <img
+      {/*      <img
         src={logo}
         className="logo animate__animated animate__flip"
         alt="logo Rick and Morty"
-      />
-
+      /> */}
       <form onSubmit={handleSubmit} className="formContainer">
         <fieldset className="formContainer__wrapper">
           <FilterInput

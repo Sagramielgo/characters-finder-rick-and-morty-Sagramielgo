@@ -5,12 +5,14 @@ import Filters from './filters/Filters';
 import React, { useState, useEffect } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import CharacterDetail from './characters/CharacterDetail';
+import logo from '../images/logo.png'; /*  */
 
 const App = () => {
   const [data, setData] = useState([]);
   const [name, setName] = useState('');
   const [specie, setSpecie] = useState('all');
   const [planets, setPlanets] = useState([]);
+  const [showFilters, setShowFilters] = useState(false);
 
   useEffect(() => {
     getDataFromApi().then((data) => setData(data));
@@ -70,30 +72,68 @@ const App = () => {
     return <CharacterDetail characterInfo={foundCharacter} />;
   };
 
+  const handleBtn = () => {
+    setShowFilters(!showFilters);
+  };
+  const renderFilters = () => {
+    return showFilters ? (
+      <Filters
+        handleFilter={handleFilter}
+        handleReset={handleReset}
+        name={name}
+        specie={specie}
+        planetOptions={getPlanetOptions()}
+        planets={planets}
+      />
+    ) : null;
+  };
+
   return (
-    <div className="app">
-      <Switch>
-        <Route exact path="/">
-          <>
-            <header className="app__header">
-              <Filters
-                handleFilter={handleFilter}
-                handleReset={handleReset}
-                name={name}
-                specie={specie}
-                planetOptions={getPlanetOptions()}
-                planets={planets}
-              />
-            </header>
-            <main className="app__main">
-              <CharacterList charactersInfo={filteredCharacters} />
-            </main>
-          </>
-        </Route>
-        <Route path="/character/:id" render={renderCharacterDetail} />
-      </Switch>
-      <h5 className="copy">By Sagra Mielgo copy 2021</h5>
-    </div>
+    <>
+      <div className="app">
+        <Switch>
+          <Route exact path="/">
+            <>
+              <header className="app__header">
+                <img
+                  src={logo}
+                  className="logo animate__animated animate__flip"
+                  alt="logo Rick and Morty"
+                />
+                <button
+                  className="header__btn animate__animated animate__zoomIn"
+                  onClick={handleBtn}
+                >
+                  Search your favorite
+                </button>
+              </header>
+              <section className="app__filterSection">
+                {renderFilters()}
+              </section>
+              {/*    <Filters
+               handleFilter={handleFilter}
+                  handleReset={handleReset}
+                  name={name}
+                  specie={specie}
+                  planetOptions={getPlanetOptions()}
+                  planets={planets}
+                />  */}
+              <main className="app__main">
+                <CharacterList charactersInfo={filteredCharacters} />
+              </main>
+            </>
+          </Route>
+          <Route path="/character/:id" render={renderCharacterDetail} />
+        </Switch>
+        <h5 className="copy">
+          By Sagra Mielgo.
+          <span>
+            <i class="fas fa-paw"></i>
+          </span>
+          .2021
+        </h5>
+      </div>
+    </>
   );
 };
 export default App;
