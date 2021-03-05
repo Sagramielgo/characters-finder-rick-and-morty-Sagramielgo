@@ -1,5 +1,6 @@
 import FilterInput from './FilterInput';
 import FilterSpecies from './FilterSpecies';
+import FilterPlanets from './FilterPlanets';
 import '../../stylesSheets/filters/Filters.scss';
 import logo from '../../images/logo.png';
 
@@ -11,18 +12,25 @@ const Filters = (props) => {
     <section>
       <img
         src={logo}
-        className="animate__animated animate__flip"
+        className="logo animate__animated animate__flip"
         alt="logo Rick and Morty"
       />
       <form onSubmit={handleSubmit} className="formContainer">
-        <FilterInput
+        <fieldset className="formContainer__wrapper">
+          <FilterInput
+            handleFilter={props.handleFilter}
+            handleReset={props.handleReset}
+            name={props.name}
+          />
+          <FilterSpecies
+            handleFilter={props.handleFilter}
+            specie={props.specie}
+          />
+        </fieldset>
+        <FilterPlanets
           handleFilter={props.handleFilter}
-          handleReset={props.handleReset}
-          name={props.name}
-        />
-        <FilterSpecies
-          handleFilter={props.handleFilter}
-          specie={props.specie}
+          planetOptions={props.planetOptions}
+          planets={props.planets}
         />
       </form>
     </section>

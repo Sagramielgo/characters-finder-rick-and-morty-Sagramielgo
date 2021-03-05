@@ -12,6 +12,10 @@ const FilterInput = (props) => {
   };
   return (
     <label className="form__label" htmlFor="searchField">
+      <span
+        className="icon iconInput fas fa-undo animate__animated animate__pulse animate__infinite"
+        onClick={handleReset}
+      ></span>
       <input
         className="form__input"
         type="text"
@@ -21,10 +25,6 @@ const FilterInput = (props) => {
         onChange={handleChange}
         value={props.name}
       ></input>
-      <span
-        className="icon iconInput fas fa-undo animate__animated animate__pulse animate__infinite"
-        onClick={handleReset}
-      ></span>
     </label>
   );
 };

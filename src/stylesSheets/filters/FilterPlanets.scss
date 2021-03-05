@@ -1,0 +1,56 @@
+@import '../core/Reset.scss';
+@import '../core/Variables.scss';
+
+.checkContainer {
+  width: 50%;
+  height: 120px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 20px;
+  border-style: none;
+  @include medium {
+    margin-left: 20px;
+  }
+}
+.checkTitle {
+  color: $brandColor-1;
+  margin-left: 30px;
+  font-size: 24px;
+  padding-bottom: 5px;
+  font-weight: bold;
+  @include medium {
+    font-weight: normal;
+    font-size: 20px;
+  }
+}
+.labelCheck {
+  color: $brandColor-3;
+  display: inline;
+  margin-left: 15px;
+  font-size: 18px;
+  cursor: pointer;
+  @include medium {
+    font-size: 16px;
+  }
+}
+.planetList {
+  width: 400px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  text-align: left;
+  @include medium {
+    flex-wrap: nowrap;
+  }
+}
+
+.inputCheck {
+  margin-right: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  margin-bottom: 5px;
+}

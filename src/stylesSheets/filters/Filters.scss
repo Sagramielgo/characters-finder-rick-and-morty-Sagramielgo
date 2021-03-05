@@ -1,7 +1,27 @@
 @import '../core/Reset.scss';
+@import '../core/Variables.scss';
 
 .formContainer {
-  width: 700px;
-  margin: auto;
+  width: 100%;
+  display: flex;
   margin-top: 30px;
+  @include medium {
+    margin-top: 15px;
+  }
+
+  &__wrapper {
+    width: 50%;
+    text-align: right;
+    border-style: none;
+  }
+}
+.logo {
+  width: 400px;
+  @include medium {
+    width: 300px;
+  }
+
+  @include small {
+    width: 150px;
+  }
 }

@@ -9,31 +9,21 @@
   grid-template-areas: 'header' 'main';
   text-align: center;
 
-  @media all and (max-width: $displayM) {
+  @include medium {
     grid-template-rows: 350px 1fr;
   }
 
-  @media all and (max-width: $displayS) {
+  @include small {
     grid-template-rows: 250px 1fr;
   }
 
   &__header {
     grid-area: header;
 
-    &-logo {
-      @media all and (max-width: $displayM) {
-        width: 90%;
-      }
-
-      @media all and (max-width: $displayS) {
-        width: 85%;
-      }
+    &__main {
+      grid-area: main;
+      width: 90%;
+      margin: auto;
     }
-  }
-
-  &__main {
-    grid-area: main;
-    width: 90%;
-    margin: auto;
   }
 }
