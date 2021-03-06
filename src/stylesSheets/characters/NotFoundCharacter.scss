@@ -23,7 +23,6 @@
 
   &__image {
     width: 40vh;
-    bottom: 0;
 
     @include large {
       width: 30vh;
@@ -31,7 +30,7 @@
 
     @include medium {
       width: 25vh;
-      bottom: 0;
+      margin-bottom: rem(20);
     }
   }
 }
