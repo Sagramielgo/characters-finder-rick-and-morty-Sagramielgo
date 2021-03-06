@@ -27,13 +27,21 @@ TARJETA DETALLE: Haciendo click sobre la tarjeta de un personaje, se muestra una
 
 BONUS:
 FILTROS EXTRA: Además del input de texto que pedían he añadido otros dos por planeta de origen y especie.
+
 URL COMPARTIBLES: Para copiar y pegar en tu navegador.
+
 ¿Y SI 'COPYPASTEO' MAL...? Salta un mensaje de error en la búsqueda, y te muestra el camino de regreso a casa.
+
 RUTAS DINÁMICAS: Para enviarte a cada tarjeta detalle.
+
 FUNCIONALIDAD LOADING: En caso de que tarde en cargar unos segundos o hubiera algún problema, te indica que esperes, para que no desesperes!
+
 ORDEN ALFABÉTICO: Ordenar las tarjetas de personajes mediante una función.
+
 EVITAR el envío por defecto del formulario.
+
 FILTRADO con independencia de mayúsculas y minúsculas.
+
 CADA OVEJA CON SU PAREJA: Cada componente de js tiene su correspondiente archivo de estilos, con el mismo nombre y en una carpeta gemela. Para que puedas llevarte a tu proyecto el trocito que te guste, completo.
 
 MEJORAS:
