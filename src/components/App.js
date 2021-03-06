@@ -13,23 +13,27 @@ import { Route, Switch } from 'react-router-dom';
 //imported components
 import Header from './header/Header';
 import Filters from './filters/Filters';
+import Loading from './Loading';
 import CharacterList from './characters/CharacterList';
 import CharacterDetail from './characters/CharacterDetail';
 import Footer from './Footer';
 
 //FUNCTIONAL COMPONENT
 const App = () => {
-  //states to control components content
+  //states to control components content HOOKS
   const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(true);
   const [name, setName] = useState('');
   const [specie, setSpecie] = useState('all');
   const [planets, setPlanets] = useState([]);
   const [showFilters, setShowFilters] = useState(false);
 
-  /*    De forma similar a componentDidMount y componentDidUpdate en componente de clase
-  actualiza los datos usando la API del navegador */
+  /*   
+  Update data calling to API. Loading is false when promise completes */
   useEffect(() => {
-    getDataFromApi().then((data) => setData(data));
+    getDataFromApi()
+      .then((data) => setData(data))
+      .then(() => setLoading(false));
   }, []); //empty array to avoid infinite renderings
 
   //function received by props to register inputchanges and update usetate
@@ -113,10 +117,10 @@ const App = () => {
     <div className="app">
       <Switch>
         <Route exact path="/">
-          {' '}
           {/*  to go strictly home */}
           <>
             <Header handleBtn={handleBtn} />
+            <Loading loading={loading} />
             {renderFilters()}
             <CharacterList charactersInfo={filteredCharacters} />
             <Footer />
