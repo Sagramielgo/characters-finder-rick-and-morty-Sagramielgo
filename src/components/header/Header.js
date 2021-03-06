@@ -1,8 +1,13 @@
-import logo from '../../images/logo.png';
+//styles
 import '../../stylesSheets/header/Header.scss';
 
+//imported image
+import logo from '../../images/logo.png';
+
+//importe component
 import WelcomeBtn from './WelcomeBtn';
 
+//FUNCTIONAL COMPONENT
 const Header = (props) => {
   return (
     <header className="header">

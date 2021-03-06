@@ -1,5 +1,7 @@
+//styles
 import '../stylesSheets/Footer.scss';
 
+//FUNCTIONAL COMPONENT
 const Footer = () => {
   return (
     <a

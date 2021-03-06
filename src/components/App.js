@@ -1,47 +1,63 @@
+//styles
 import '../stylesSheets/App.scss';
 
+//imported component that calls to API
 import getDataFromApi from './services/Api';
 
+//react to keep usetates and apply life-cycle
+import React, { useState, useEffect } from 'react';
+
+//imported from react to get different pathlinks in a SPA
+import { Route, Switch } from 'react-router-dom';
+
+//imported components
 import Header from './header/Header';
 import Filters from './filters/Filters';
 import CharacterList from './characters/CharacterList';
 import CharacterDetail from './characters/CharacterDetail';
 import Footer from './Footer';
-import React, { useState, useEffect } from 'react';
-import { Route, Switch } from 'react-router-dom';
 
+//FUNCTIONAL COMPONENT
 const App = () => {
+  //states to control components content
   const [data, setData] = useState([]);
   const [name, setName] = useState('');
   const [specie, setSpecie] = useState('all');
   const [planets, setPlanets] = useState([]);
   const [showFilters, setShowFilters] = useState(false);
 
+  /*    De forma similar a componentDidMount y componentDidUpdate en componente de clase
+  actualiza los datos usando la API del navegador */
   useEffect(() => {
     getDataFromApi().then((data) => setData(data));
-  }, []);
+  }, []); //empty array to avoid infinite renderings
 
+  //function received by props to register inputchanges and update usetate
   const handleFilter = (inputChange) => {
     if (inputChange.key === 'name') {
       setName(inputChange.value);
     } else if (inputChange.key === 'specie') {
       setSpecie(inputChange.value);
     } else if (inputChange.key === 'planet') {
+      //travels along the array to get key position to compare and add to the array those which aren't there
       const indexPlanet = planets.indexOf(inputChange.value);
       if (indexPlanet === -1) {
         setPlanets([...planets, inputChange.value]);
       } else {
+        //create a new array to aply splice method in order to remove those which are already in
         const newPlanets = [...planets];
         newPlanets.splice(indexPlanet, 1);
         setPlanets(newPlanets);
-        console.log(newPlanets);
       }
     }
   };
+
+  //Filter the search by comparing the input info whith the data got from API
   const filteredCharacters = data
     .filter((character) => {
       return character.name.toUpperCase().includes(name);
     })
+    //array method for alphabetical order
     .sort((characterA, characterB) =>
       characterA.name > characterB.name ? 1 : -1
     )
@@ -51,13 +67,15 @@ const App = () => {
     .filter((character) => {
       return planets.length === 0 ? true : planets.includes(character.planet);
     });
-  //no pintar los repetidos
+
+  //function received by props to render not duplicated planets in checkbox
   const getPlanetOptions = () => {
     const planetsArray = data.map((character) => character.planet);
     const planets = new Set(planetsArray);
     return Array.from(planets);
   };
 
+  //function received by props to reset info by updating useState
   const handleReset = () => {
     setData(data);
     setName('');
@@ -72,11 +90,12 @@ const App = () => {
     });
     return <CharacterDetail characterInfo={foundCharacter} />;
   };
-  //oShow or hice fiters section
+  //function to hide or Show filters section
   const handleBtn = () => {
     setShowFilters(!showFilters);
   };
 
+  //render the filtersection when the state showFilters is true, and doesn't when is false
   const renderFilters = () => {
     return showFilters ? (
       <Filters
@@ -94,6 +113,8 @@ const App = () => {
     <div className="app">
       <Switch>
         <Route exact path="/">
+          {' '}
+          {/*  to go strictly home */}
           <>
             <Header handleBtn={handleBtn} />
             {renderFilters()}
@@ -101,6 +122,7 @@ const App = () => {
             <Footer />
           </>
         </Route>
+        {/*  dinamic route to go to links in a SPA and share link in browser */}
         <Route path="/character/:id" render={renderCharacterDetail} />
       </Switch>
     </div>

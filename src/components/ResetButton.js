@@ -4,8 +4,9 @@ import '../stylesSheets/ResetButton.scss';
 //proptypes
 import PropTypes from 'prop-types';
 
-//component
+//FUNCTIONAL COMPONENT
 const ResetButton = (props) => {
+  //listener no click and pass the information by props to upper component, in this case to App (contains useState needed)
   const handleReset = () => {
     props.handleReset();
   };

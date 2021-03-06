@@ -1,8 +1,13 @@
-import React from 'react';
+//styles
 import '../../stylesSheets/characters/NotFoundCharacter.scss';
+//react
+import React from 'react';
+
+//imported images
 import image from '../../images/no.gif';
 import imageOops from '../../images/oops.gif';
 
+//FUNCTIONAL COMPONENT
 const NotFoundCharacter = () => {
   return (
     <li className="error">

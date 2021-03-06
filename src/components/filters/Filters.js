@@ -1,10 +1,17 @@
+//styles
+import '../../stylesSheets/filters/Filters.scss';
+
+//proptypes
+import PropTypes from 'prop-types';
+
+//importe components
 import FilterInput from './FilterInput';
 import FilterSpecies from './FilterSpecies';
 import FilterPlanets from './FilterPlanets';
-import '../../stylesSheets/filters/Filters.scss';
-import PropTypes from 'prop-types';
 
+//FUNCTIONAL COMPONENT
 const Filters = (props) => {
+  //function to avoid form default sending
   const handleSubmit = (ev) => {
     ev.preventDefault();
   };
@@ -32,6 +39,8 @@ const Filters = (props) => {
     </section>
   );
 };
+
+//propTypes
 Filters.propTypes = {
   handleFilter: PropTypes.func,
   handleReset: PropTypes.func,

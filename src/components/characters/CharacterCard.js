@@ -1,8 +1,15 @@
+//styles
 import '../../stylesSheets/characters/CharacterCard.scss';
-import { Link } from 'react-router-dom';
+
+//Proptypes
 import PropTypes from 'prop-types';
 
+//react
+import { Link } from 'react-router-dom';
+
+//FUNCTIONAL COMPONENT
 const CharacterCard = (props) => {
+  //function to get the status and render a representative icon
   const getDeadOrAliveClass = () => {
     if (props.characterInfo.status === 'Alive') {
       return 'fa-heartbeat animate__heartBeat';
@@ -12,8 +19,10 @@ const CharacterCard = (props) => {
       return 'fa-question animate__rubberBand';
     }
   };
+
   return (
     <li>
+      {/* the complete card is a link to click on it */}
       <Link
         className="link card"
         to={`/character/${props.characterInfo.id}`}
@@ -32,7 +41,7 @@ const CharacterCard = (props) => {
             {props.characterInfo.specie}
             <span className="card__text-paragraph3">
               <i
-                className={`fas animate__animated animate__infinite ${getDeadOrAliveClass()}`}
+                className={`fas animate__animated animate__infinite ${getDeadOrAliveClass()}`} //call the function to render the resulting class
               />
             </span>
           </p>
@@ -43,6 +52,7 @@ const CharacterCard = (props) => {
   );
 };
 
+//propTypes
 CharacterCard.propTypes = {
   characterInfo: PropTypes.shape({
     id: PropTypes.number.isRequired,

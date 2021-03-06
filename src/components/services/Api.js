@@ -1,3 +1,4 @@
+//call to api. First filter to get why we want, with more concrete routes of properties
 const getDataFromApi = () => {
   return fetch('//rickandmortyapi.com/api/character/')
     .then((response) => response.json())

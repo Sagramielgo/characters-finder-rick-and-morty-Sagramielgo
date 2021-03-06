@@ -4,14 +4,16 @@ import '../../stylesSheets/filters/FilterInput.scss';
 //proptypes
 import PropTypes from 'prop-types';
 
-//importe component
+//imported component
 import ResetButton from '../ResetButton';
-//functional component
+
+//FUNCTIONAL COMPONENT
 const FilterInput = (props) => {
+  //listener to get key and value info when user write in
   const handleChange = (ev) => {
     props.handleFilter({
       key: 'name',
-      value: ev.target.value.toUpperCase(), //
+      value: ev.target.value.toUpperCase(), //apply uppercase to compare the searching introduced with the characterCard info (array method applied in both)
     });
   };
 

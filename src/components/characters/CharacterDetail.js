@@ -1,12 +1,23 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+//imported styles
 import '../../stylesSheets/characters/CharacterDetail.scss';
+
+//propTypes
+import PropTypes from 'prop-types';
+
+//react
+import React from 'react';
 import { Link } from 'react-router-dom';
+
+//imported images
 import image from '../../images/CatNoWay.gif';
 import logo from '../../images/logo.png';
+
+//imported components
 import Footer from '../Footer';
 
+//FUNCTIONAL COMPONENT
 const CharacterDetail = (props) => {
+  //condition to render error-card in case the character searched in the browser were not found
   if (props.characterInfo === undefined) {
     return (
       <div className="modal">
@@ -38,6 +49,7 @@ const CharacterDetail = (props) => {
       </div>
     );
   } else {
+    //render a card with more details of the selected character
     return (
       <article className="modal">
         <div className="modal__dialog">
@@ -85,6 +97,7 @@ const CharacterDetail = (props) => {
   }
 };
 
+//propTypes
 CharacterDetail.propTypes = { characterInfo: PropTypes.object };
 
 export default CharacterDetail;

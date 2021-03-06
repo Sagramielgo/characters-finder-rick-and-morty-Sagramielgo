@@ -1,6 +1,12 @@
+//styles
 import '../../stylesSheets/filters/FilterPlanets.scss';
+
+//propTypes
 import PropTypes from 'prop-types';
+
+//FUNCTIONAL COMPONENT
 const FilterPlanets = (props) => {
+  //lifing function to get key and value of the property 'planet'
   const handleChange = (ev) => {
     props.handleFilter({
       key: 'planet',
@@ -8,6 +14,7 @@ const FilterPlanets = (props) => {
     });
   };
 
+  //variable that contains, after travels along with an array method lifting by props, each single element <li> with a label and checkbox input.
   const planetsList = props.planetOptions.map((planet, index) => {
     return (
       <li key={index} className="checkBox">
@@ -25,6 +32,8 @@ const FilterPlanets = (props) => {
       </li>
     );
   });
+
+  //render a list with all items icluded in variable {planetsList}
   return (
     <fieldset className="checkContainer">
       <label className="checkTitle" htmlFor="planet">
@@ -35,6 +44,7 @@ const FilterPlanets = (props) => {
   );
 };
 
+//propTypes
 FilterPlanets.propTypes = {
   planets: PropTypes.func.isRequired,
 };

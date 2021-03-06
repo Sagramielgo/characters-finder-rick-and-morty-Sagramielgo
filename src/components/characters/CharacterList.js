@@ -1,9 +1,16 @@
+//styles
 import '../../stylesSheets/characters/CharacterList.scss';
+
+//propTypes
 import PropTypes from 'prop-types';
+
+//imported components
 import CharacterCard from './CharacterCard';
 import NotFoundCharacter from './NotFoundCharacter';
 
+//FUNCTINAL COMPONENT
 const CharacterList = (props) => {
+  //array method to get key and information of each character
   const charactersList = props.charactersInfo.map((card) => {
     return (
       <CharacterCard
@@ -13,7 +20,7 @@ const CharacterList = (props) => {
       />
     );
   });
-
+  //condition to render a "try again" message in case the searchin name inserted at the inputs were not found
   if (charactersList.length === 0) {
     return <NotFoundCharacter />;
   }
@@ -26,6 +33,7 @@ const CharacterList = (props) => {
   );
 };
 
+//propTypes
 CharacterList.propTypes = {
   characterInfo: PropTypes.array,
 };

@@ -1,6 +1,7 @@
 import '../../stylesSheets/header/WelcomeBtn.scss';
 
 const WelcomeBtn = (props) => {
+  //listener to pass information by props to upper component
   const handleBtn = () => {
     props.handleBtn();
   };
