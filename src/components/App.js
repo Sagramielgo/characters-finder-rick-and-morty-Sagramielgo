@@ -1,11 +1,12 @@
 import '../stylesSheets/App.scss';
-import CharacterList from './characters/CharacterList';
 import getDataFromApi from './services/Api';
+import Header from './Header';
 import Filters from './filters/Filters';
+import CharacterList from './characters/CharacterList';
+import CharacterDetail from './characters/CharacterDetail';
+import Footer from './Footer';
 import React, { useState, useEffect } from 'react';
 import { Route, Switch } from 'react-router-dom';
-import CharacterDetail from './characters/CharacterDetail';
-import Header from './Header';
 
 const App = () => {
   const [data, setData] = useState([]);
@@ -88,37 +89,19 @@ const App = () => {
   };
 
   return (
-    <>
-      <div className="app">
-        <Switch>
-          <Route exact path="/">
-            <>
-              <Header handleBtn={handleBtn} />
-
-              {renderFilters()}
-
-              <CharacterList charactersInfo={filteredCharacters} />
-            </>
-          </Route>
-          <Route path="/character/:id" render={renderCharacterDetail} />
-        </Switch>
-
-        <a
-          className=""
-          href="https://github.com/Sagramielgo"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <h5 className="copy animate__animated animate__headShake animate__infinite">
-            By #Git Funtastic.
-            <span>
-              <i className="fas fa-paw "></i>
-            </span>
-            .2021
-          </h5>
-        </a>
-      </div>
-    </>
+    <div className="app">
+      <Switch>
+        <Route exact path="/">
+          <>
+            <Header handleBtn={handleBtn} />
+            {renderFilters()}
+            <CharacterList charactersInfo={filteredCharacters} />
+            <Footer />
+          </>
+        </Route>
+        <Route path="/character/:id" render={renderCharacterDetail} />
+      </Switch>
+    </div>
   );
 };
 export default App;

@@ -14,7 +14,7 @@ const Header = (props) => {
         alt="logo Rick and Morty"
       />
       <button
-        className="header__btn animate__animated animate__zoomIn"
+        className="header__btn animate__animated  animate__pulse animate__infinite"
         onClick={handleBtn}
       >
         Search your favorite

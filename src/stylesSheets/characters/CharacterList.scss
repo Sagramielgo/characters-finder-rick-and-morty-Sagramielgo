@@ -4,13 +4,13 @@
   display: grid;
   width: 90%;
   margin-left: auto;
-  margin-bottom: 30px;
-  grid-template-columns: repeat(auto-fill, 200px);
-  grid-gap: 50px;
+  margin-bottom: rem(30);
+  grid-template-columns: repeat(auto-fill, rem(200));
+  grid-gap: rem(50);
 
   @include medium {
-    grid-template-columns: repeat(auto-fill, 150px);
-    grid-gap: 40px;
-    margin-bottom: 50px;
+    grid-template-columns: repeat(auto-fill, rem(150));
+    grid-gap: rem(40);
+    margin-bottom: rem(50);
   }
 }

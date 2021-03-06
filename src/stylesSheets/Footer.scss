@@ -1,0 +1,15 @@
+@import './core/Variables.scss';
+.copy {
+  margin: rem(10) 0 rem(30) 0;
+  font-weight: normal;
+  font-size: rem(16);
+  color: $brandColor-4;
+  padding: rem(10);
+  @include medium {
+    font-size: rem(12);
+    margin: rem(5) 0 rem(20) 0;
+  }
+}
+.fa-paw {
+  color: $brandColor-3;
+}

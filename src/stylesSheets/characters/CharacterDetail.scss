@@ -16,15 +16,15 @@
 
   &__content {
     padding: rem(16);
-    border-radius: 40px;
-    border: solid 5px rebeccapurple;
+    border-radius: rem(40);
+    border: solid rem(5) rebeccapurple;
     background-color: $brandColor-1;
     display: flex;
     flex-direction: row;
     align-items: center;
     @include medium {
-      width: rem(485);
-      height: rem(270);
+      width: rem(490);
+      height: rem(280);
       padding: rem(10);
     }
   }
@@ -34,26 +34,26 @@
   }
 
   &__img--error {
-    width: 200px;
-    padding-right: 10px;
+    width: rem(200);
+    padding-right: rem(10);
     @include medium {
       width: rem(150);
     }
   }
 
   &__img--src {
-    width: 300px;
-    padding-right: 10px;
+    width: rem(300);
+    padding-right: rem(10);
     border-radius: 50%;
     margin-left: rem(15);
-    box-shadow: 0 0 70px 0 rgba(252, 252, 252, 0.75);
+    box-shadow: 0 0 rem(70) 0 rgba(252, 252, 252, 0.75);
     @include medium {
       width: rem(200);
     }
   }
 
   &__text {
-    padding-left: 20px;
+    padding-left: rem(20);
     text-align: left;
     font-weight: 500;
     color: $paragraphColor;
@@ -62,9 +62,9 @@
     }
   }
   &__text--error {
-    padding: 20px;
+    padding: rem(20);
     text-align: center;
-    font-size: 30px;
+    font-size: rem(30);
     font-weight: 700;
     color: $brandColor-2;
     @include medium {
@@ -74,19 +74,19 @@
 
   &__text--property {
     font-weight: 600;
-    margin-bottom: 5px;
+    margin-bottom: rem(5);
   }
 }
 
 .icon {
-  padding: 10px;
-  width: 45px;
-  height: 45px;
+  padding: rem(10);
+  width: rem(45);
+  height: rem(45);
   text-align: center;
   border: none;
   border-radius: 50%;
   cursor: pointer;
-  font-size: 24px;
+  font-size: rem(24);
   font-weight: 700;
   text-align: center;
   text-decoration: none;
@@ -98,20 +98,20 @@
   background-color: $brandColor-2;
 }
 .iconDetail {
-  margin-top: 250px;
+  margin-top: rem(250);
   @include medium {
-    margin-bottom: 50px;
+    margin-bottom: rem(50);
   }
 }
 .logoDetail {
-  width: 220px;
-  margin-bottom: 30px;
+  width: rem(220);
+  margin-bottom: rem(30);
   @include medium {
-    width: rem(180);
-    margin-bottom: 20px;
+    width: rem(185);
+    margin: rem(10) 0;
   }
   &--error {
     text-align: center;
-    margin-bottom: 10px;
+    margin-bottom: rem(10);
   }
 }

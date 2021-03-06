@@ -7,13 +7,13 @@
 .formContainer {
   width: 100%;
   display: flex;
-  margin-bottom: 30px;
+  margin-bottom: rem(30);
   @include large {
-    margin-bottom: 80px;
+    margin-bottom: rem(80);
   }
 
   @include medium {
-    margin-bottom: 60px;
+    margin-bottom: rem(60);
   }
 
   &__wrapper {
@@ -22,13 +22,3 @@
     border-style: none;
   }
 }
-
-/* .copy {
-  font-weight: normal;
-  font-size: 16px;
-  color: $brandColor-4;
-  @include medium {
-    font-size: 12px;
-  }
-}
- */

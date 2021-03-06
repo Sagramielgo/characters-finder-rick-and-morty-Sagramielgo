@@ -1,23 +1,23 @@
 @import '../core/Variables.scss';
 @import '../core/Reset.scss';
 .specie__title {
-  font-size: 20px;
-  margin: 0 0 20px 20px;
+  font-size: rem(20);
+  margin: 0 0 rem(20) rem(20);
   color: $brandColor-4;
   font-weight: bold;
 }
 .specie__input {
-  width: 130px;
-  height: 35px;
-  font-size: 20px;
+  width: rem(130);
+  height: rem(35);
+  font-size: rem(20);
   color: $brandColor-1;
   font-weight: bold;
   border: none;
-  margin-left: 10px;
-  border: 2px solid $brandColor-3;
-  border-radius: 10px;
-  padding-left: 10px;
-  margin-top: 10px;
+  margin-left: rem(10);
+  border: rem(2) solid $brandColor-3;
+  border-radius: rem(10);
+  padding-left: rem(10);
+  margin-top: rem(10);
   cursor: pointer;
   &:focus {
     border: none;

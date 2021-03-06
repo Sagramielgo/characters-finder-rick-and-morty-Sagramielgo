@@ -8,17 +8,17 @@
   align-items: center;
 
   &__text {
-    padding: 0 50px 100px 50px;
-    font-size: 26px;
+    padding: 0 rem(50) rem(100) rem(50);
+    font-size: rem(26);
     font-weight: bold;
     color: $brandColor-1;
 
     @include medium {
-      font-size: 22px;
+      font-size: rem(22);
     }
 
     @include small {
-      font-size: 12px;
+      font-size: rem(12);
     }
   }
 
@@ -39,7 +39,7 @@
   width: 40vh;
   position: absolute;
   bottom: 5vh;
-  @media all and (max-width: $displayM) {
+  @include medium {
     width: 40vh;
     bottom: 5vh;
   }

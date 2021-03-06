@@ -7,34 +7,34 @@
   align-items: center;
 
   &__btn {
-    width: 180px;
-    height: 40px;
-    border-radius: 15px;
+    width: rem(180);
+    height: rem(40);
+    border-radius: rem(15);
     background-color: $brandColor-1;
     border: rem(2) solid $brandColor-4;
     color: $brandColor-4;
-    font-size: 16px;
+    font-size: rem(16);
     cursor: pointer;
-    margin-bottom: 20px;
+    margin-bottom: rem(20);
     transition: all 0.3s ease-in-out;
     &:hover {
       transform: scale(1.1);
     }
 
     @include medium {
-      width: 120px;
-      height: 25px;
-      font-size: 10px;
+      width: rem(120);
+      height: rem(25);
+      font-size: rem(10);
     }
   }
 }
 .logo {
-  width: 600px;
+  width: rem(600);
   @include medium {
-    width: 300px;
+    width: rem(300);
   }
 
   @include small {
-    width: 150px;
+    width: rem(150);
   }
 }

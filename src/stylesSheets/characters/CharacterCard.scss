@@ -7,14 +7,14 @@
 .card {
   box-sizing: border-box;
   display: grid;
-  grid-template-columns: 190px;
-  grid-template-rows: 85px 215px;
+  grid-template-columns: rem(190);
+  grid-template-rows: rem(85) rem(215);
   grid-template-areas: 'image' 'text';
-  border-radius: 25px;
+  border-radius: rem(25);
   background-color: rgb(49, 209, 214);
-  box-shadow: 5px 5px 15px rgba(163, 228, 240, 0.5);
+  box-shadow: rem(5) rem(5) rem(15) rgba(163, 228, 240, 0.5);
   text-align: center;
-  border: 3px solid $brandColor-1;
+  border: rem(3) solid $brandColor-1;
   transition: all 0.2s ease-in-out;
   &:hover {
     transform: scale(1.1);
@@ -22,13 +22,13 @@
   }
 
   @include medium {
-    grid-template-columns: 140px;
-    grid-template-rows: 80px 145px;
+    grid-template-columns: rem(140);
+    grid-template-rows: rem(80) rem(145);
   }
 
   @include small {
-    grid-template-columns: 150px;
-    grid-template-rows: 90px 130px;
+    grid-template-columns: rem(150);
+    grid-template-rows: rem(90) rem(130);
   }
 
   &__container-img {
@@ -36,63 +36,63 @@
   }
 
   &__img {
-    width: 195px;
-    border-top-left-radius: 25px;
-    border-top-right-radius: 25px;
+    width: rem(195);
+    border-top-left-radius: rem(25);
+    border-top-right-radius: rem(25);
 
     @include medium {
-      width: 145px;
+      width: rem(145);
     }
   }
 
   &__text {
     grid-area: text;
     justify-content: flex-end;
-    border-bottom-left-radius: 25px;
-    border-bottom-right-radius: 25px;
+    border-bottom-left-radius: rem(25);
+    border-bottom-right-radius: rem(25);
 
     &-title {
-      margin: 65px 15px 23px 15px;
+      margin: rem(65) rem(15) rem(23) rem(15);
       color: $brandColor-4;
-      padding: 3px 0 5px 0;
+      padding: rem(3) 0 rem(5) 0;
       background-color: rgba(22, 148, 187, 0.5);
-      border-radius: 10px;
+      border-radius: rem(10);
       @include medium {
-        margin: 30px 15px 20px 15px;
+        margin: rem(30) rem(15) rem(20) rem(15);
         font-size: 14px;
       }
 
       @include small {
-        font-size: 13px;
+        font-size: rem(13);
       }
     }
 
     &-paragraph1 {
-      padding-bottom: 3px;
-      font-weight: 500;
+      padding-bottom: rem(3);
+      font-weight: rem(500);
       color: $paragraphColor;
 
       @include medium {
-        font-size: 13px;
+        font-size: rem(13);
       }
     }
     &-paragraph2 {
       font-weight: 500;
       color: $paragraphColor;
-      font-size: 14px;
+      font-size: rem(14);
 
       @include medium {
-        font-size: 10px;
+        font-size: rem(10);
       }
     }
     &-paragraph3 {
-      margin-left: 5px;
+      margin-left: rem(5);
       font-weight: 500;
       color: $paragraphColor;
-      font-size: 20px;
+      font-size: rem(20);
       color: rebeccapurple;
       @include medium {
-        font-size: 14px;
+        font-size: rem(14);
       }
     }
   }

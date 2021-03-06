@@ -2,41 +2,41 @@
 
 .checkContainer {
   width: 50%;
-  height: 150px;
+  height: rem(150);
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin-left: 20px;
+  margin-left: rem(20);
   border-style: none;
   @include medium {
-    margin-left: 20px;
+    margin-left: rem(20);
   }
 }
 .checkTitle {
   color: $brandColor-1;
-  margin-left: 30px;
-  font-size: 24px;
-  padding-bottom: 5px;
+  margin-left: rem(30);
+  font-size: rem(24);
+  padding-bottom: rem(5);
   font-weight: bold;
   @include medium {
     font-weight: normal;
-    font-size: 20px;
+    font-size: rem(20);
   }
 }
 .labelCheck {
   color: $brandColor-3;
   display: inline;
-  margin-left: 15px;
-  font-size: 18px;
+  margin-left: rem(15);
+  font-size: rem(18);
   cursor: pointer;
   @include medium {
-    font-size: 16px;
+    font-size: rem(16);
   }
 }
 .planetList {
-  width: 400px;
-  height: 100px;
+  width: rem(400);
+  height: rem(100);
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -48,8 +48,8 @@
 }
 
 .inputCheck {
-  margin-right: 5px;
-  font-size: 18px;
+  margin-right: rem(5);
+  font-size: rem(18);
   cursor: pointer;
-  margin-bottom: 5px;
+  margin-bottom: rem(5);
 }
