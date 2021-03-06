@@ -1,21 +1,21 @@
 SAGRA MIELGO #Git Funtastic
 MÓDULO 3 EVALUACIÓN FINAL
 
-El ejercicio consiste en realizar SPA funcional poniendo en práctica los conocimientos de React adquiridos durante este módulo en Adalab.
+El ejercicio consiste en realizar una SPA funcional poniendo en práctica los conocimientos de React adquiridos durante este módulo en Adalab.
 Partimos de una plantilla de React; primero haz npm install y después npm start para visionar el estado del ejercicio en la web.
 
-Podemos modificar dicha plantilla para que se acomode a nuestras necesidades;
-He actualizadoel archivo package json para que cree directamente la carpeta de producción docs, necesaria para publicar en gitHub pages, y no sea necesario ejecutar npm build.
+Podemos modificarla; he actualizadoel archivo package json para que cree directamente la carpeta de producción docs, necesaria para publicar en gitHub pages, y no sea necesario ejecutar npm build.
 
 Orden y concierto:
 Carpeta componentes para javascript; carpeta stylesSheets para archivos scss y services para llamada a la API.
-Después he realizado una estructura de componentes de javascript con código escrito en JSX, cuya sintaxis es similar a HTML pero en este caso se escribe en archivos de js.
-He preferido utilizar componentes funcionales; la sintaxis no es tan compleja como en los componentes de clase.
+Componentes de javascript con código escrito en JSX, cuya sintaxis es similar a HTML pero en este caso se escribe en archivos de js.
+He preferido utilizar componentes funcionales..
 
 Y DICHO ESTO:
-En este caso el ejercicio versa sobre los personajes de la serie de animación RICK AND MORTY.
+El ejercicio versa sobre los personajes de la serie de animación RICK AND MORTY.
 
 FASES DEL EJERCICIO:
+
 LLAMADA API: Filtrar de salida la información que nos interesa.
 
 PINTAR EN PANTALLA LISTA DE PERSONAJES: Con la información que nos devuelve la API mostrar tarjetas con imagen, nombre y género de cada personaje.
@@ -39,7 +39,7 @@ CADA OVEJA CON SU PAREJA: Cada componente de js tiene su correspondiente archivo
 MEJORAS:
 Estilos y diseño: La página es muy chula, responsive y grid-friendly.
 Código limpio, ordenado y comentado.
-Mensaje de oops, no encuentro lo que buscas. Try again!
+Mensaje de Oops!, no encuentro lo que buscas. Try again!
 Animaciones, para que sea divertida y adictiva la experiencia de usuaria.
 COLAPSABLE: Un botón abre y cierra la sección de filtros, experiencia de usuaria completa.
 
