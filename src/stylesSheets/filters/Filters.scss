@@ -7,9 +7,9 @@
 .formContainer {
   width: 100%;
   display: flex;
-  margin-bottom: rem(30);
+  margin-bottom: rem(20);
   @include large {
-    margin-bottom: rem(80);
+    margin-bottom: rem(70);
   }
 
   @include medium {

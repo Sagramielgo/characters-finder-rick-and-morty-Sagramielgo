@@ -3,8 +3,7 @@ import '../../stylesSheets/characters/NotFoundCharacter.scss';
 //react
 import React from 'react';
 
-//imported images
-import image from '../../images/no.gif';
+//imported image
 import imageOops from '../../images/oops.gif';
 
 //FUNCTIONAL COMPONENT
@@ -15,7 +14,6 @@ const NotFoundCharacter = () => {
       <p className="error__text">
         Ooops!! Are you sure this character exists? Please try another search.
       </p>
-      <img className="error__image image2" src={image} alt="Search Error" />
     </li>
   );
 };
