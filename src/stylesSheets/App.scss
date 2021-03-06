@@ -30,10 +30,6 @@
   font-size: 16px;
   color: $brandColor-4;
   padding: 10px;
-  @include medium {
-    font-size: 12px;
-    bottom: 10px;
-  }
 }
 .fa-paw {
   color: $brandColor-1;

@@ -1,9 +1,8 @@
-@import '../core/Reset.scss';
 @import '../core/Variables.scss';
 
 .checkContainer {
   width: 50%;
-  height: 120px;
+  height: 150px;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -43,7 +42,7 @@
   flex-wrap: wrap;
   align-content: flex-start;
   text-align: left;
-  @include medium {
+  @include large {
     flex-wrap: nowrap;
   }
 }
