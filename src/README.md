@@ -1,15 +1,15 @@
 SAGRA MIELGO #Git Funtastic
 MÓDULO 3 EVALUACIÓN FINAL
 
-El ejercicio consiste en realizar una SPA funcional poniendo en práctica los conocimientos de React adquiridos durante este módulo en Adalab.
+El ejercicio consiste en realizar una SPA funcional poniendo en práctica los conocimientos de React adquiridos en Adalab durante este módulo.
 Partimos de una plantilla de React; primero haz npm install y después npm start para visionar el estado del ejercicio en la web.
 
-Podemos modificarla; he actualizadoel archivo package json para que cree directamente la carpeta de producción docs, necesaria para publicar en gitHub pages, y no sea necesario ejecutar npm build.
+Podemos modificarla; he actualizado el archivo package json para que cree directamente la carpeta de producción docs, necesaria para publicar en gitHub pages, y no sea necesario ejecutar npm build.
 
 Orden y concierto:
 Carpeta componentes para javascript; carpeta stylesSheets para archivos scss y services para llamada a la API.
 Componentes de javascript con código escrito en JSX, cuya sintaxis es similar a HTML pero en este caso se escribe en archivos de js.
-He preferido utilizar componentes funcionales..
+He preferido utilizar componentes funcionales, you know why ;)
 
 Y DICHO ESTO:
 El ejercicio versa sobre los personajes de la serie de animación RICK AND MORTY.
@@ -23,7 +23,7 @@ PINTAR EN PANTALLA LISTA DE PERSONAJES: Con la información que nos devuelve la 
 FILTROS: En un formulario planteamos diversas formas de búsqueda, combinando también funcionalidades distintas (como inputs de texto, desplegables o checkboxes):
 La usuaria puede buscar su personaje favorito por nombre, especie o laneta de origen.
 
-TARJETA DETALLE: Haciendo click sobre la tarjeta de un personaje, se muestra una tarjeta ampliando la información con vivo o muerto, especie, planeta de origen y núm de episodios en los que aparece. Y por supuesto con un botón para regresar a la página principal
+TARJETA DETALLE: Haciendo click sobre la tarjeta de un personaje, se muestra una tarjeta ampliando la información con vivo o muerto, especie, planeta de origen y núm de episodios en los que aparece; y por supuesto con un botón para regresar a la página principal
 
 BONUS:
 FILTROS EXTRA: Además del input de texto que pedían he añadido otros dos por planeta de origen y especie.
@@ -48,4 +48,4 @@ Puedes descargar, clonar, copiar o inspirarte; compartir es vivir!
 Sigo en proceso de aprendizaje, pero si quieres ver más,
 aquí https://github.com/Sagramielgo
 
-This is all folks!
+That's all folks!
