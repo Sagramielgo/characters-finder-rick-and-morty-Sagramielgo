@@ -37,10 +37,3 @@
     }
   }
 }
-.iconInput {
-  margin-left: rem(30);
-  background-color: $brandColor-1;
-  @include small {
-    margin: rem(20) 0;
-  }
-}

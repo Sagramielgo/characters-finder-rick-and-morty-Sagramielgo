@@ -1,22 +1,23 @@
+//Styles
 import '../../stylesSheets/filters/FilterInput.scss';
+
+//proptypes
 import PropTypes from 'prop-types';
+
+//importe component
+import ResetButton from '../ResetButton';
+//functional component
 const FilterInput = (props) => {
   const handleChange = (ev) => {
     props.handleFilter({
       key: 'name',
-      value: ev.target.value.toUpperCase(),
+      value: ev.target.value.toUpperCase(), //
     });
   };
 
-  const handleReset = () => {
-    props.handleReset();
-  };
   return (
     <label className="form__label" htmlFor="searchField">
-      <span
-        className="icon iconInput fas fa-undo animate__animated animate__pulse animate__infinite"
-        onClick={handleReset}
-      ></span>
+      <ResetButton handleReset={props.handleReset} />
       <input
         className="form__input"
         type="text"
@@ -30,7 +31,6 @@ const FilterInput = (props) => {
   );
 };
 FilterInput.propTypes = {
-  handleReset: PropTypes.func.isRequired,
   name: PropTypes.string.isRequired,
 };
 
