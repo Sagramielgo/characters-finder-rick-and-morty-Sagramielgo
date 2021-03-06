@@ -1,6 +1,8 @@
 import '../stylesSheets/App.scss';
+
 import getDataFromApi from './services/Api';
-import Header from './Header';
+
+import Header from './header/Header';
 import Filters from './filters/Filters';
 import CharacterList from './characters/CharacterList';
 import CharacterDetail from './characters/CharacterDetail';

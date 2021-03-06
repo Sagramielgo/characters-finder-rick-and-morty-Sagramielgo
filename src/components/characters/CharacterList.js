@@ -1,7 +1,7 @@
 import '../../stylesSheets/characters/CharacterList.scss';
 import PropTypes from 'prop-types';
 import CharacterCard from './CharacterCard';
-import NotFound from '../NotFound';
+import NotFoundCharacter from './NotFoundCharacter';
 
 const CharacterList = (props) => {
   const charactersList = props.charactersInfo.map((card) => {
@@ -15,7 +15,7 @@ const CharacterList = (props) => {
   });
 
   if (charactersList.length === 0) {
-    return <NotFound />;
+    return <NotFoundCharacter />;
   }
   return (
     <main className="app__main">

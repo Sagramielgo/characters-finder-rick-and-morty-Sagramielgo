@@ -1,9 +1,9 @@
 import React from 'react';
-import '../stylesSheets/NotFound.scss';
-import image from '../images/no.gif';
-import imageOops from '../images/oops.gif';
+import '../../stylesSheets/characters/NotFoundCharacter.scss';
+import image from '../../images/no.gif';
+import imageOops from '../../images/oops.gif';
 
-const NotFound = () => {
+const NotFoundCharacter = () => {
   return (
     <li className="error">
       <img src={imageOops} className="error__image image1" alt="Oops" />
@@ -15,4 +15,4 @@ const NotFound = () => {
   );
 };
 
-export default NotFound;
+export default NotFoundCharacter;
