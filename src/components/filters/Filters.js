@@ -2,6 +2,7 @@ import FilterInput from './FilterInput';
 import FilterSpecies from './FilterSpecies';
 import FilterPlanets from './FilterPlanets';
 import '../../stylesSheets/filters/Filters.scss';
+import PropTypes from 'prop-types';
 
 const Filters = (props) => {
   const handleSubmit = (ev) => {
@@ -31,4 +32,13 @@ const Filters = (props) => {
     </section>
   );
 };
+Filters.propTypes = {
+  handleFilter: PropTypes.func,
+  handleReset: PropTypes.func,
+  name: PropTypes.string,
+  specie: PropTypes.array,
+  planetOptions: PropTypes.array,
+  planets: PropTypes.array,
+};
+
 export default Filters;

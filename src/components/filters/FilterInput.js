@@ -1,4 +1,5 @@
 import '../../stylesSheets/filters/FilterInput.scss';
+import PropTypes from 'prop-types';
 const FilterInput = (props) => {
   const handleChange = (ev) => {
     props.handleFilter({
@@ -28,4 +29,9 @@ const FilterInput = (props) => {
     </label>
   );
 };
+FilterInput.propTypes = {
+  handleReset: PropTypes.func.isRequired,
+  name: PropTypes.string.isRequired,
+};
+
 export default FilterInput;

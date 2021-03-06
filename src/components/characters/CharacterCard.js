@@ -1,6 +1,7 @@
 import '../../stylesSheets/characters/CharacterCard.scss';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
+
 const CharacterCard = (props) => {
   const getDeadOrAliveClass = () => {
     if (props.characterInfo.status === 'Alive') {
@@ -41,12 +42,15 @@ const CharacterCard = (props) => {
     </li>
   );
 };
-export default CharacterCard;
 
 CharacterCard.propTypes = {
   characterInfo: PropTypes.shape({
-    url: PropTypes.string,
+    id: PropTypes.number.isRequired,
+    image: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
-    gender: PropTypes.string.isRequired,
+    gender: PropTypes.string,
+    specie: PropTypes.string,
   }),
 };
+
+export default CharacterCard;

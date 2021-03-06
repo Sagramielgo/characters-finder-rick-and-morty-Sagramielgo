@@ -7,8 +7,7 @@ $brandColor-3: cyan;
 $brandColor-4: aliceBlue;
 $paragraphColor: black;
 
-// display
-
+// display mixins
 @mixin large {
   @media all and (max-width: rem(1145)) {
     @content;

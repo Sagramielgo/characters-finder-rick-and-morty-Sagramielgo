@@ -1,4 +1,5 @@
 import '../../stylesSheets/filters/FilterPlanets.scss';
+import PropTypes from 'prop-types';
 const FilterPlanets = (props) => {
   const handleChange = (ev) => {
     props.handleFilter({
@@ -32,5 +33,9 @@ const FilterPlanets = (props) => {
       <ul className="planetList">{planetsList}</ul>
     </fieldset>
   );
+};
+
+FilterPlanets.propTypes = {
+  planets: PropTypes.func.isRequired,
 };
 export default FilterPlanets;

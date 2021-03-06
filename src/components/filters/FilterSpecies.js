@@ -1,4 +1,5 @@
 import '../../stylesSheets/filters/FilterSpecies.scss';
+import PropTypes from 'prop-types';
 
 const FilterSpecies = (props) => {
   const handleChange = (ev) => {
@@ -24,4 +25,9 @@ const FilterSpecies = (props) => {
     </>
   );
 };
+
+FilterSpecies.propTypes = {
+  specie: PropTypes.string,
+};
+
 export default FilterSpecies;

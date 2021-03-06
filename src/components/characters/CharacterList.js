@@ -1,4 +1,5 @@
 import '../../stylesSheets/characters/CharacterList.scss';
+import PropTypes from 'prop-types';
 import CharacterCard from './CharacterCard';
 import NotFound from '../NotFound';
 
@@ -23,6 +24,10 @@ const CharacterList = (props) => {
       </ul>
     </main>
   );
+};
+
+CharacterList.propTypes = {
+  characterInfo: PropTypes.array,
 };
 
 export default CharacterList;

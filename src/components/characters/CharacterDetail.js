@@ -1,5 +1,5 @@
 import React from 'react';
-/* import PropTypes from 'prop-types'; */
+import PropTypes from 'prop-types';
 import '../../stylesSheets/characters/CharacterDetail.scss';
 import { Link } from 'react-router-dom';
 import image from '../../images/CatNoWay.gif';
@@ -84,4 +84,7 @@ const CharacterDetail = (props) => {
     );
   }
 };
+
+CharacterDetail.propTypes = { characterInfo: PropTypes.object };
+
 export default CharacterDetail;
