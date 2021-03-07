@@ -18,6 +18,12 @@
       width: rem(200);
       height: rem(50);
       padding-left: rem(10);
+      @include small {
+        margin-top: 0;
+        font-size: rem(14);
+        width: rem(210);
+        height: rem(40);
+      }
     }
 
     &::placeholder {

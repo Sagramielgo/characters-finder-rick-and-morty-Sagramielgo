@@ -13,7 +13,8 @@
     }
 
     @include small {
-      width: rem(150);
+      width: rem(170);
+      margin: rem(20) 0;
     }
   }
 }

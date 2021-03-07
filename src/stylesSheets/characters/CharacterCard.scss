@@ -14,7 +14,7 @@
   background-color: rgb(49, 209, 214);
   box-shadow: rem(5) rem(5) rem(15) rgba(163, 228, 240, 0.5);
   text-align: center;
-  border: rem(3) solid $brandColor-1;
+  border: rem(2) solid $brandColor-1;
   transition: all 0.2s ease-in-out;
   &:hover {
     transform: scale(1.1);
@@ -27,8 +27,8 @@
   }
 
   @include small {
-    grid-template-columns: rem(150);
-    grid-template-rows: rem(90) rem(130);
+    grid-template-columns: rem(138);
+    grid-template-rows: rem(80) rem(145);
   }
 
   &__container-img {
@@ -37,11 +37,14 @@
 
   &__img {
     width: rem(195);
-    border-top-left-radius: rem(25);
-    border-top-right-radius: rem(25);
+    border-top-left-radius: rem(23);
+    border-top-right-radius: rem(23);
 
     @include medium {
-      width: rem(145);
+      width: rem(146);
+    }
+    @include small {
+      width: rem(146);
     }
   }
 
