@@ -3,7 +3,6 @@
 .modal {
   width: 100%;
   height: 100vh;
-  background: url('../../images/saturno.jpg') no-repeat center top;
   background-size: cover;
   background-attachment: fixed;
 
@@ -78,26 +77,6 @@
   }
 }
 
-/* .icon {
-  padding: rem(10);
-  width: rem(45);
-  height: rem(45);
-  text-align: center;
-  border: none;
-  border-radius: 50%;
-  cursor: pointer;
-  font-size: rem(24);
-  font-weight: 700;
-  text-align: center;
-  text-decoration: none;
-  outline: none;
-  color: $brandColor-4;
-  @include medium {
-    width: rem(40);
-    height: rem(40);
-    font-size: rem(22);
-  }
-} */
 .iconDetail,
 .iconError {
   background-color: $brandColor-2;
