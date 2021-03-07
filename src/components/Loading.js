@@ -1,3 +1,5 @@
+//styles
+import '../stylesSheets/Loading.scss';
 //react
 import React from 'react';
 //imported image
@@ -7,7 +9,7 @@ const Loading = (props) => {
   if (props.loading) {
     return (
       <div className="loading">
-        <img src={image} alt="Loading logo" />
+        <img className="loadingImg" src={image} alt="Loading logo" />
       </div>
     );
   } else {

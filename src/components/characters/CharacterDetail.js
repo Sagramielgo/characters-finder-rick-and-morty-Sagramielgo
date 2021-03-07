@@ -14,6 +14,7 @@ import logo from '../../images/logo.png';
 
 //imported components
 import Footer from '../Footer';
+import ResetButton from '../ResetButton';
 
 //FUNCTIONAL COMPONENT
 const CharacterDetail = (props) => {
@@ -25,7 +26,8 @@ const CharacterDetail = (props) => {
           <div className="modal__content animate__animated animate__rubberBand">
             <header className="modal__header">
               <Link to="/">
-                <span className="modal__close icon iconError fas fa-undo animate__animated animate__heartBeat animate__infinite"></span>
+                {/*    <span className="modal__close icon iconError fas fa-undo animate__animated animate__heartBeat animate__infinite"></span> */}
+                <ResetButton />
               </Link>
             </header>
             <div className="modal__text--error">

@@ -1,5 +1,35 @@
 @import './core/Variables.scss';
 
+.icon {
+  padding: rem(10);
+  width: rem(45);
+  height: rem(45);
+  text-align: center;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: rem(24);
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: $brandColor-4;
+  @include medium {
+    width: rem(40);
+    height: rem(40);
+    font-size: rem(22);
+  }
+}
+.iconDetail,
+.iconError {
+  background-color: $brandColor-2;
+}
+.iconDetail {
+  margin-top: rem(250);
+  @include medium {
+    margin-bottom: rem(50);
+  }
+}
 .iconInput {
   margin-left: rem(30);
   background-color: $brandColor-1;
