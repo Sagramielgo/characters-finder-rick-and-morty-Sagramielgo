@@ -21,4 +21,7 @@
     text-align: right;
     border-style: none;
   }
+  @include small {
+    padding-left: 10vw;
+  }
 }

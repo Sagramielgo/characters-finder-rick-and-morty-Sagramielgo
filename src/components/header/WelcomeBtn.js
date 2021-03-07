@@ -11,7 +11,7 @@ const WelcomeBtn = (props) => {
       className="header__btn animate__animated  animate__pulse animate__infinite"
       onClick={handleBtn}
     >
-      Search your favorite
+      Click to search
     </button>
   );
 };

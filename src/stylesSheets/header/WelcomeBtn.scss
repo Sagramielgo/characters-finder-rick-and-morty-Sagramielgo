@@ -7,7 +7,7 @@
   background-color: $brandColor-1;
   border: rem(2) solid $brandColor-4;
   color: $brandColor-4;
-  font-size: rem(16);
+  font-size: rem(18);
   cursor: pointer;
   margin-bottom: rem(20);
   transition: all 0.3s ease-in-out;
@@ -16,7 +16,12 @@
   }
 
   @include medium {
-    width: rem(120);
+    width: rem(130);
+    height: rem(30);
+    font-size: rem(12);
+  }
+  @include small {
+    width: rem(100);
     height: rem(25);
     font-size: rem(10);
   }

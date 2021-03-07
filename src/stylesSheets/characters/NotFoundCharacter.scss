@@ -23,14 +23,5 @@
 
   &__image {
     width: 40vh;
-
-    @include large {
-      width: 30vh;
-    }
-
-    @include medium {
-      width: 25vh;
-      margin-bottom: rem(20);
-    }
   }
 }

@@ -45,7 +45,7 @@ Filters.propTypes = {
   handleFilter: PropTypes.func,
   handleReset: PropTypes.func,
   name: PropTypes.string,
-  specie: PropTypes.array,
+  specie: PropTypes.string,
   planetOptions: PropTypes.array,
   planets: PropTypes.array,
 };

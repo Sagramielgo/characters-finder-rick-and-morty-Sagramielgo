@@ -46,6 +46,6 @@ const FilterPlanets = (props) => {
 
 //propTypes
 FilterPlanets.propTypes = {
-  planets: PropTypes.func.isRequired,
+  planets: PropTypes.array.isRequired,
 };
 export default FilterPlanets;

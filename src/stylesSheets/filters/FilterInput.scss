@@ -21,8 +21,9 @@
       @include small {
         margin-top: 0;
         font-size: rem(14);
-        width: rem(210);
+        width: rem(170);
         height: rem(40);
+        padding-left: rem(10);
       }
     }
 
@@ -35,6 +36,9 @@
       @include medium {
         padding-right: rem(25);
         font-size: rem(14);
+      }
+      @include small {
+        font-size: rem(12);
       }
     }
     &:focus {

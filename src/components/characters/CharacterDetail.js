@@ -26,7 +26,6 @@ const CharacterDetail = (props) => {
           <div className="modal__content animate__animated animate__rubberBand">
             <header className="modal__header">
               <Link to="/">
-                {/*    <span className="modal__close icon iconError fas fa-undo animate__animated animate__heartBeat animate__infinite"></span> */}
                 <ResetButton />
               </Link>
             </header>

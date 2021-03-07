@@ -1,12 +1,12 @@
 @import './core/Variables.scss';
 
 .loadingImg {
-  width: rem(200);
+  width: rem(140);
   @include medium {
-    width: rem(170);
+    width: rem(120);
   }
 
   @include small {
-    width: rem(140);
+    width: rem(100);
   }
 }
