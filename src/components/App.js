@@ -17,15 +17,16 @@ import Loading from './Loading';
 import CharacterList from './characters/CharacterList';
 import CharacterDetail from './characters/CharacterDetail';
 import Footer from './Footer';
+import localStorage from './services/localStorage';
 
 //FUNCTIONAL COMPONENT
 const App = () => {
   //states to control components content HOOKS
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [name, setName] = useState('');
-  const [specie, setSpecie] = useState('all');
-  const [planets, setPlanets] = useState([]);
+  const [name, setName] = useState(localStorage.get('name') || '');
+  const [specie, setSpecie] = useState(localStorage.get('specie') || 'all');
+  const [planets, setPlanets] = useState(localStorage.get('planets') || []);
   const [showFilters, setShowFilters] = useState(false);
 
   /*   
@@ -35,6 +36,12 @@ const App = () => {
       .then((data) => setData(data))
       .then(() => setLoading(false));
   }, []); //empty array to avoid infinite renderings
+
+  useEffect(() => {
+    localStorage.set('name', name);
+    localStorage.set('specie', specie);
+    localStorage.set('planets', planets);
+  });
 
   //function received by props to register inputchanges and update usetate
   const handleFilter = (inputChange) => {
@@ -57,6 +64,7 @@ const App = () => {
   };
 
   //Filter the search by comparing the input info whith the data got from API
+
   const filteredCharacters = data
     .filter((character) => {
       return character.name.toUpperCase().includes(name);
