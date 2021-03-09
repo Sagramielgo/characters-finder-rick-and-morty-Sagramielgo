@@ -21,13 +21,12 @@ import localStorage from './services/localStorage';
 
 //FUNCTIONAL COMPONENT
 const App = () => {
-  const localStorageData = localStorage.get('data');
   //states to control components content HOOKS
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [name, setName] = useState(localStorageData.name);
-  const [specie, setSpecie] = useState(localStorageData.specie);
-  const [planets, setPlanets] = useState([localStorageData.planets]);
+  const [name, setName] = useState(localStorage.get('name') || '');
+  const [specie, setSpecie] = useState(localStorage.get('specie') || 'all');
+  const [planets, setPlanets] = useState(localStorage.get('planets') || []);
   const [showFilters, setShowFilters] = useState(false);
 
   /*   
@@ -39,9 +38,9 @@ const App = () => {
   }, []); //empty array to avoid infinite renderings
 
   useEffect(() => {
-    localStorage.set('data', { name: name });
-    localStorage.set('data', { specie: specie });
-    localStorage.set('data', [specie]);
+    localStorage.set('name', name);
+    localStorage.set('specie', specie);
+    localStorage.set('planets', planets);
   });
 
   //function received by props to register inputchanges and update usetate
@@ -65,6 +64,7 @@ const App = () => {
   };
 
   //Filter the search by comparing the input info whith the data got from API
+
   const filteredCharacters = data
     .filter((character) => {
       return character.name.toUpperCase().includes(name);
