@@ -27,7 +27,9 @@ const App = () => {
   const [name, setName] = useState(localStorage.get('name') || '');
   const [specie, setSpecie] = useState(localStorage.get('specie') || 'all');
   const [planets, setPlanets] = useState(localStorage.get('planets') || []);
-  const [showFilters, setShowFilters] = useState(false);
+  const [showFilters, setShowFilters] = useState(
+    localStorage.get('showFilters') || false
+  );
 
   /*   
   Update data calling to API. Loading is false when promise completes */
@@ -41,6 +43,7 @@ const App = () => {
     localStorage.set('name', name);
     localStorage.set('specie', specie);
     localStorage.set('planets', planets);
+    localStorage.set('showFilters', showFilters);
   });
 
   //function received by props to register inputchanges and update usetate
@@ -70,9 +73,14 @@ const App = () => {
       return character.name.toUpperCase().includes(name);
     })
     //array method for alphabetical order
-    .sort((characterA, characterB) =>
-      characterA.name > characterB.name ? 1 : -1
-    )
+    .sort((characterA, characterB) => {
+      if (characterA.name === characterB.name) {
+        return 0;
+      } else {
+        return characterA.name > characterB.name ? 1 : -1;
+      }
+    })
+
     .filter((character) => {
       return specie === 'all' ? true : character.specie === specie;
     })
