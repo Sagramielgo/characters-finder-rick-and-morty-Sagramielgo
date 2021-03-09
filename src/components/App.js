@@ -73,13 +73,13 @@ const App = () => {
       return character.name.toUpperCase().includes(name);
     })
     //array method for alphabetical order
-    .sort((characterA, characterB) => {
-      if (characterA.name === characterB.name) {
-        return 0;
-      } else {
-        return characterA.name > characterB.name ? 1 : -1;
-      }
-    })
+    .sort((characterA, characterB) =>
+      characterA.name > characterB.name
+        ? 1
+        : characterA.name < characterB.name
+        ? -1
+        : 0
+    )
 
     .filter((character) => {
       return specie === 'all' ? true : character.specie === specie;
