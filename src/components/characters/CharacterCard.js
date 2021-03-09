@@ -23,11 +23,7 @@ const CharacterCard = (props) => {
   return (
     <li>
       {/* the complete card is a link to click on it */}
-      <Link
-        className="link card"
-        to={`/character/${props.characterInfo.id}`}
-        replace
-      >
+      <Link className="link card" to={`/character/${props.characterInfo.id}`}>
         <div className="card__container-img">
           <img
             className="card__img"
