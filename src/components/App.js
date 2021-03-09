@@ -17,15 +17,17 @@ import Loading from './Loading';
 import CharacterList from './characters/CharacterList';
 import CharacterDetail from './characters/CharacterDetail';
 import Footer from './Footer';
+import localStorage from './services/localStorage';
 
 //FUNCTIONAL COMPONENT
 const App = () => {
+  const localStorageData = localStorage.get('data');
   //states to control components content HOOKS
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [name, setName] = useState('');
-  const [specie, setSpecie] = useState('all');
-  const [planets, setPlanets] = useState([]);
+  const [name, setName] = useState(localStorageData.name);
+  const [specie, setSpecie] = useState(localStorageData.specie);
+  const [planets, setPlanets] = useState([localStorageData.planets]);
   const [showFilters, setShowFilters] = useState(false);
 
   /*   
@@ -35,6 +37,12 @@ const App = () => {
       .then((data) => setData(data))
       .then(() => setLoading(false));
   }, []); //empty array to avoid infinite renderings
+
+  useEffect(() => {
+    localStorage.set('data', { name: name });
+    localStorage.set('data', { specie: specie });
+    localStorage.set('data', [specie]);
+  });
 
   //function received by props to register inputchanges and update usetate
   const handleFilter = (inputChange) => {
