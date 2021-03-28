@@ -7,8 +7,8 @@
 .card {
   box-sizing: border-box;
   display: grid;
-  grid-template-columns: rem(190);
-  grid-template-rows: rem(85) rem(215);
+  grid-template-columns: rem(195);
+  grid-template-rows: rem(90) rem(215);
   grid-template-areas: 'image' 'text';
   border-radius: rem(25);
   background-color: rgb(49, 209, 214);
@@ -22,12 +22,12 @@
   }
 
   @include medium {
-    grid-template-columns: rem(140);
+    grid-template-columns: rem(147);
     grid-template-rows: rem(80) rem(145);
   }
 
   @include small {
-    grid-template-columns: rem(138);
+    grid-template-columns: rem(147);
     grid-template-rows: rem(80) rem(145);
   }
 
@@ -55,13 +55,14 @@
     border-bottom-right-radius: rem(25);
 
     &-title {
-      margin: rem(65) rem(15) rem(23) rem(15);
+      margin: rem(65) 0 rem(23) 0;
+      font-size: rem(16);
       color: $brandColor-4;
-      padding: rem(3) 0 rem(5) 0;
+      padding: rem(3) 0 rem(3) 0;
       background-color: rgba(22, 148, 187, 0.5);
-      border-radius: rem(10);
+
       @include medium {
-        margin: rem(30) rem(15) rem(20) rem(15);
+        margin: rem(30) 0 rem(20) 0;
         font-size: 14px;
       }
 
