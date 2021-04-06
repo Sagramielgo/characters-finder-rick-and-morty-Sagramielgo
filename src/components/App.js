@@ -2,7 +2,7 @@
 import '../stylesSheets/App.scss';
 
 //imported component that calls to API
-import getDataFromApi from './services/Api';
+import getDataFromApi from '../services/Api';
 
 //react to keep usetates and apply life-cycle
 import React, { useState, useEffect } from 'react';
@@ -17,7 +17,7 @@ import Loading from './Loading';
 import CharacterList from './characters/CharacterList';
 import CharacterDetail from './characters/CharacterDetail';
 import Footer from './Footer';
-import localStorage from './services/localStorage';
+import localStorage from '../services/localStorage';
 
 //FUNCTIONAL COMPONENT
 const App = () => {
