@@ -72,6 +72,13 @@ const App = () => {
     .filter((character) => {
       return character.name.toUpperCase().includes(name);
     })
+
+    .filter((character) => {
+      return specie === 'all' ? true : character.specie === specie;
+    })
+    .filter((character) => {
+      return planets.length === 0 ? true : planets.includes(character.planet);
+    })
     //array method for alphabetical order
     .sort((characterA, characterB) =>
       characterA.name > characterB.name
@@ -79,14 +86,7 @@ const App = () => {
         : characterA.name < characterB.name
         ? -1
         : 0
-    )
-
-    .filter((character) => {
-      return specie === 'all' ? true : character.specie === specie;
-    })
-    .filter((character) => {
-      return planets.length === 0 ? true : planets.includes(character.planet);
-    });
+    );
 
   //function received by props to render not duplicated planets in checkbox
   const getPlanetOptions = () => {
