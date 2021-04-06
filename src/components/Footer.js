@@ -12,7 +12,7 @@ const Footer = () => {
         rel="noreferrer"
       >
         <h5 className="copy animate__animated animate__headShake animate__infinite">
-          By #gitFuntastic &nbsp;
+          By #gitFuntastic&nbsp;
           <span>
             <i className="fas fa-paw "></i>
           </span>
