@@ -1,5 +1,4 @@
-SAGRA MIELGO #Git Funtastic
-MÓDULO 3 EVALUACIÓN FINAL
+## Characters Finder Rick and Morty
 
 El ejercicio consiste en realizar una SPA funcional poniendo en práctica los conocimientos de React adquiridos en Adalab durante este módulo.
 Partimos de una plantilla de React; primero haz npm install y después npm start para visionar el estado del ejercicio en la web.
@@ -55,6 +54,6 @@ MEJORAS:
 Puedes descargar, clonar, copiar o inspirarte; compartir es vivir!
 
 Sigo en proceso de aprendizaje, pero si quieres ver más,
-aquí https://github.com/Sagramielgo
+[#gitFuntastic] (https://github.com/Sagramielgo)
 
 That's all folks!
