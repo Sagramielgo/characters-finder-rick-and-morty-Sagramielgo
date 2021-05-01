@@ -54,6 +54,6 @@ MEJORAS:
 Puedes descargar, clonar, copiar o inspirarte; compartir es vivir!
 
 Sigo en proceso de aprendizaje, pero si quieres ver más,
-[#gitFuntastic] (https://github.com/Sagramielgo)
+[#gitFuntastic](https://github.com/Sagramielgo)
 
 That's all folks!
